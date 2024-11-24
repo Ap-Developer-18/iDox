@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./assets/images/ai.png" type="image/x-icon">
+    <title>iDox.ai</title>
+</head>
+
+<body class="body-color">
+
+    <!------------------------------------------- preloader ------------------------------------------------------->
+    <section class="position-fixed top-0 start-0 preloader">
+        <div class="loading">
+            <svg version="1.1" id="L1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <circle fill="none" stroke="#fff" stroke-width="6" stroke-miterlimit="15"
+                    stroke-dasharray="14.2472,14.2472" cx="50" cy="50" r="47">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="5s"
+                        from="0 50 50" to="360 50 50" repeatCount="indefinite" />
+                </circle>
+                <circle fill="none" stroke="#fff" stroke-width="1" stroke-miterlimit="10" stroke-dasharray="10,10"
+                    cx="50" cy="50" r="39">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="5s"
+                        from="0 50 50" to="-360 50 50" repeatCount="indefinite" />
+                </circle>
+                <g fill="#fff">
+                    <rect x="30" y="35" width="5" height="30">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
+                            repeatCount="indefinite" begin="0.1" />
+                    </rect>
+                    <rect x="40" y="35" width="5" height="30">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
+                            repeatCount="indefinite" begin="0.2" />
+                    </rect>
+                    <rect x="50" y="35" width="5" height="30">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
+                            repeatCount="indefinite" begin="0.3" />
+                    </rect>
+                    <rect x="60" y="35" width="5" height="30">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
+                            repeatCount="indefinite" begin="0.4" />
+                    </rect>
+                    <rect x="70" y="35" width="5" height="30">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
+                            repeatCount="indefinite" begin="0.5" />
+                    </rect>
+                </g>
+            </svg>
+        </div>
+        <p class="fm_imbue fw-700 fs-80 lh-86 text-white m-0 pt-4 opacity-75">iDOX.ai</p>
+    </section>
+
+    <!-- ----------------------------------------- all-content ------------------------------------------------- -->
+
+    <div class="overflowX-hidden min-vh-100">
+        <div class="all-content w-100">
+            <!-- ----------------------------------------- header ------------------------------------------------- -->
+            <header class="w-100 m-0 p-0">
+                <nav class="nav position-relative z-30">
+                    <div class="container-fluid container-xl">
+                        <div class="navbar d-flex justify-content-between w-100 align-items-center">
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="./assets/images/logo.png" alt="logo">
+                                </a>
+                            </div>
+
+                            <input type="checkbox" id="checkbox" hidden>
+                            <label for="checkbox" class="toggle d-flex flex-column d-lg-none z-31">
+                                <div class="bars" id="bar1"></div>
+                                <div class="bars" id="bar2"></div>
+                                <div class="bars" id="bar3"></div>
+                            </label>
+
+                            <div class="navbar-items d-flex gap-5 gap-lg-4 gap-xl-5 align-items-center">
+                                <li class="nav-list"><a href="#"
+                                        class="text-decoration-none ff-jakrta fw-400 fs-15 lh-150 nav-color">redact</a>
+                                </li>
+                                <li class="nav-list"><a href="#"
+                                        class="text-decoration-none ff-jakrta fw-400 fs-15 lh-150 nav-color">extract</a>
+                                </li>
+                                <li class="nav-list"><a href="#"
+                                        class="text-decoration-none ff-jakrta fw-400 fs-15 lh-150 nav-color">detect</a>
+                                </li>
+                                <li class="nav-list"><a href="#"
+                                        class="text-decoration-none ff-jakrta fw-400 fs-15 lh-150 nav-color">redact</a>
+                                </li>
+                                <li class="nav-list"><a href="#"
+                                        class="text-decoration-none ff-jakrta fw-400 fs-15 lh-150 nav-color">compare</a>
+                                </li>
+                                <button
+                                    class="try-btn commen-btn d-flex justify-content-center align-items-center fw-600 fs-16 lh-150 white-color ff-jakrta">Try
+                                    now</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- ----------------------------------------- main ------------------------------------------------- -->
+
+            <section class="section1 position-relative">
+                <div class="my_container mx-auto">
+                    <div class="row justify-content-between align-items-center gap-4 gap-lg-0">
+                        <div class="col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start">
+                            <div class="d-flex align-items-center">
+                                <div class="blue-line"></div>
+                                <div class="no-1 fw-300 fs-32 lh-150 white-color">The world’s <span
+                                        class="hash-blue">#1</span></div>
+                            </div>
+                            <div class="txt fw-700 fs-48 lh-150 ff-jakrta white-color pt-1 text-center text-lg-start">AI
+                                powered document
+                                compliance
+                                solution</div>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end">
+                            <div class="d-flex flex-column align-items-center align-items-lg-start">
+                                <div class="sec1-p text-center text-lg-start ff-jakrta fw-400 fs-16 lh-150">iDox.ai
+                                    provides
+                                    the world’s most advanced
+                                    AI powered redaction solution for organizations
+                                    to scan and detect within
+                                    document management systems, folders, and multitude of file sources.</div>
+                                <button
+                                    class="request-btn commen-btn try-btn fw-600 fs-16 lh-150 ff-jakrta white-color d-flex justify-content-center align-items-center">Request
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my_container mx-auto mt-82">
+                    <div class="dashbord-box flex-column flex-lg-row d-flex justify-content-center position-relative">
+                        <img src="./assets/images/Dashboard.png" alt="Dashboard" class="dash-img w-100">
+
+                        <div
+                            class="saving-card1 z-1 d-none d-lg-flex commen-save-card position-absolute align-items-center gap-20">
+                            <div class="save-svg1 save-svg d-flex justify-content-center align-items-center">
+                                <svg width="30" height="27" viewBox="0 0 30 27" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M26.2148 13.4462C27.363 12.6126 28.2321 11.5244 28.7635 10.3105C29.1296 11.3001 29.3213 12.4093 29.3213 13.6478C29.3213 16.6044 28.1859 18.6757 27.0215 20.01C26.4437 20.6723 25.8638 21.1479 25.4221 21.4615C25.335 21.5232 25.2532 21.5786 25.1776 21.6283V23.6152C25.1776 25.1931 23.7861 26.4723 22.0698 26.4723H21.0339C19.8896 26.4723 18.962 25.6194 18.962 24.5676H14.8184C14.8184 25.6194 13.8908 26.4723 12.7465 26.4723H11.7106C9.99423 26.4723 8.60281 25.1931 8.60281 23.6152V23.2089C8.42393 23.1565 8.2236 23.0917 8.00741 23.0114C7.17879 22.7039 6.09911 22.1647 5.10289 21.2363C3.87615 20.0931 3.18896 18.6624 2.84457 17.7647C2.73184 17.4708 2.50599 17.2858 2.28621 17.2287C1.12036 16.9258 0.31543 15.9476 0.31543 14.8338V13.3215C0.31543 12.2245 1.10627 11.2604 2.25346 10.9589C2.4676 10.9026 2.69992 10.7102 2.81424 10.3925C3.09326 9.61687 3.63138 8.47075 4.61758 7.55167C5.42433 6.79982 6.29503 6.24412 6.95597 5.87822C7.15625 5.76732 7.33924 5.67279 7.49784 5.59456V2.01824C7.49784 1.34492 7.97799 0.869664 8.49398 0.67713C9.00571 0.486216 9.6918 0.51814 10.2049 0.963835C10.7286 1.41867 11.4171 1.96273 12.1534 2.4058C12.9085 2.86016 13.617 3.14865 14.1949 3.20252L14.2059 3.20355C13.1119 4.6965 12.6081 6.52452 12.8424 8.35517C13.0931 10.3137 14.7418 11.4914 16.1258 12.0184L21.0755 13.9028C22.4597 14.4298 24.5314 14.6684 26.2148 13.4462ZM8.08485 12.1856C8.94303 12.1856 9.63874 11.546 9.63874 10.7571C9.63874 9.96811 8.94303 9.3285 8.08485 9.3285C7.22667 9.3285 6.53097 9.96811 6.53097 10.7571C6.53097 11.546 7.22667 12.1856 8.08485 12.1856Z"
+                                        fill="#8048F8" />
+                                </svg>
+                            </div>
+                            <div class="save-all-txt">
+                                <div class="ninety-five fw-700 fs-20 lh-150 white-color ff-jakrta">95%</div>
+                                <div class="saving-txt fw-400 fs-16 lh-150 ff-jakrta white-color">Cost savings</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="saving-card2 z-1 d-none d-lg-flex commen-save-card position-absolute align-items-center gap-20">
+                            <div class="save-svg2 save-svg d-flex justify-content-center align-items-center">
+                                <svg width="25" height="28" viewBox="0 0 25 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.3526 0.191406H3.54006C1.90845 0.191406 0.60168 1.40636 0.60168 2.90639L0.586914 24.6263C0.586914 26.1263 1.89368 27.3413 3.52529 27.3413H21.2589C22.8905 27.3413 24.2121 26.1263 24.2121 24.6263V8.33636L15.3526 0.191406ZM18.3058 21.9113H6.4932V19.1963H18.3058V21.9113ZM18.3058 16.4813H6.4932V13.7663H18.3058V16.4813ZM13.8761 9.69386V2.22765L21.9972 9.69386H13.8761Z"
+                                        fill="#0389FF" />
+                                </svg>
+                            </div>
+                            <div class="save-all-txt">
+                                <div class="ninety-five fw-700 fs-20 lh-150 white-color ff-jakrta">47+</div>
+                                <div class="saving-txt fw-400 fs-16 lh-150 ff-jakrta white-color">File formats</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="saving-card3 z-1 d-none d-lg-flex commen-save-card position-absolute align-items-center gap-20">
+                            <div class="save-svg3 save-svg d-flex justify-content-center align-items-center">
+                                <svg width="23" height="28" viewBox="0 0 23 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.0948 16.4959C14.9213 16.4959 13.7742 16.8158 12.7986 17.4151C11.8229 18.0145 11.0624 18.8664 10.6134 19.863C10.1643 20.8597 10.0468 21.9565 10.2757 23.0145C10.5047 24.0726 11.0697 25.0445 11.8995 25.8073C12.7292 26.5702 13.7864 27.0897 14.9373 27.3001C16.0882 27.5106 17.2811 27.4026 18.3652 26.9897C19.4493 26.5769 20.376 25.8778 21.0279 24.9808C21.6798 24.0838 22.0278 23.0292 22.0278 21.9504C22.0278 21.2341 21.8743 20.5248 21.5762 19.863C21.278 19.2013 20.841 18.6 20.29 18.0935C19.7391 17.587 19.0851 17.1852 18.3652 16.9111C17.6454 16.6369 16.8739 16.4959 16.0948 16.4959ZM18.0724 20.7383H15.4355V21.3443H17.4132C17.588 21.3443 17.7557 21.4082 17.8794 21.5219C18.003 21.6355 18.0724 21.7897 18.0724 21.9504V23.7686C18.0724 23.9293 18.003 24.0835 17.8794 24.1971C17.7557 24.3108 17.588 24.3746 17.4132 24.3746H16.754V24.9807H15.4355V24.3746H14.1171V23.1625H16.754V22.5565H14.7763C14.6015 22.5565 14.4338 22.4926 14.3102 22.379C14.1865 22.2653 14.1171 22.1111 14.1171 21.9504V20.1322C14.1171 19.9715 14.1865 19.8173 14.3102 19.7037C14.4338 19.59 14.6015 19.5262 14.7763 19.5262H15.4355V18.9201H16.754V19.5262H18.0724V20.7383ZM9.50253 8.01101C8.80318 8.01101 8.13247 7.7556 7.63796 7.30096C7.14345 6.84633 6.86563 6.22971 6.86563 5.58677V4.37464H12.1394V5.58677C12.1394 6.22971 11.8616 6.84633 11.3671 7.30096C10.8726 7.7556 10.2019 8.01101 9.50253 8.01101ZM9.50253 17.708C10.0296 17.706 10.5447 17.8519 10.9792 18.1262C10.166 19.046 9.66405 20.1649 9.53549 21.3443H6.86563V20.1322C6.86563 19.4893 7.14345 18.8727 7.63796 18.418C8.13247 17.9634 8.80318 17.708 9.50253 17.708ZM9.80577 23.7686C9.94892 24.1914 10.1435 24.598 10.3859 24.9807H0.932617V23.7686H2.25106V20.7383C2.24425 19.3948 2.68198 18.0811 3.50614 16.9716C4.33031 15.8621 5.50197 15.0092 6.86563 14.5262V11.1928C5.50197 10.7098 4.33031 9.85689 3.50614 8.74739C2.68198 7.6379 2.24425 6.32423 2.25106 4.98071V1.9504H0.932617V0.738281H18.0724V1.9504H16.754V4.98071C16.7608 6.32423 16.3231 7.6379 15.4989 8.74739C14.6747 9.85689 13.5031 10.7098 12.1394 11.1928V14.5262C13.0783 14.865 13.9295 15.3812 14.6379 16.0413C13.6422 16.2453 12.7121 16.6604 11.9219 17.2534C11.4068 16.8898 10.8023 16.6484 10.1617 16.5504V9.16858C11.0827 9.02547 11.9189 8.58732 12.5222 7.93175C13.1255 7.27618 13.4569 6.44548 13.4579 5.58677V3.76858C13.4579 3.60785 13.3884 3.45369 13.2648 3.34003C13.1412 3.22638 12.9735 3.16252 12.7986 3.16252H6.20641C6.03157 3.16252 5.86389 3.22638 5.74027 3.34003C5.61664 3.45369 5.54718 3.60785 5.54718 3.76858V5.58677C5.54813 6.44548 5.87959 7.27618 6.48288 7.93175C7.08616 8.58732 7.92233 9.02547 8.8433 9.16858V16.5504C7.92233 16.6935 7.08616 17.1317 6.48288 17.7872C5.87959 18.4428 5.54813 19.2735 5.54718 20.1322V21.9504C5.54718 22.1111 5.61664 22.2653 5.74027 22.379C5.86389 22.4926 6.03157 22.5565 6.20641 22.5565H9.53549C9.58099 22.9678 9.67155 23.3739 9.80577 23.7686Z"
+                                        fill="#23A566" />
+                                </svg>
+                            </div>
+                            <div class="save-all-txt">
+                                <div class="ninety-five fw-700 fs-20 lh-150 white-color ff-jakrta">95%</div>
+                                <div class="saving-txt fw-400 fs-16 lh-150 ff-jakrta white-color">Time savings</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="saving-card4 z-1 d-none d-lg-flex commen-save-card position-absolute align-items-center gap-20">
+                            <div class="save-svg4 save-svg d-flex justify-content-center align-items-center">
+                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.6623 2.79866V5.1623C16.589 5.42275 18.3766 6.30945 19.7497 7.68581C21.1229 9.06217 22.0054 10.8518 22.2614 12.7791H24.625C24.3548 10.2275 23.2188 7.84551 21.4061 6.02957C19.5934 4.21364 17.2134 3.07339 14.6623 2.79866ZM2.3182 12.7791H4.68183C4.94228 10.8524 5.82898 9.06484 7.20534 7.69168C8.58171 6.31852 10.3714 5.43599 12.2986 5.18003V2.81639C9.74708 3.08658 7.36504 4.2226 5.54911 6.03531C3.73317 7.84801 2.59292 10.228 2.3182 12.7791ZM22.2614 15.1428C22.0018 17.0668 21.1177 18.8525 19.7448 20.2253C18.372 21.5982 16.5864 22.4823 14.6623 22.7418V25.1055C17.2139 24.8353 19.5959 23.6993 21.4118 21.8866C23.2278 20.0739 24.368 17.6938 24.6427 15.1428H22.2614ZM4.69956 15.1428H2.33592C2.60612 17.6943 3.74213 20.0764 5.55484 21.8923C7.36754 23.7082 9.74756 24.8485 12.2986 25.1232V22.7596C10.372 22.4991 8.58437 21.6124 7.21121 20.2361C5.83805 18.8597 4.95552 17.07 4.69956 15.1428ZM13.4805 8.64276C12.4286 8.64276 11.4004 8.95466 10.5258 9.53903C9.65127 10.1234 8.96963 10.954 8.56711 11.9258C8.16459 12.8975 8.05927 13.9668 8.26447 14.9985C8.46968 16.0301 8.97618 16.9777 9.71995 17.7215C10.4637 18.4652 11.4113 18.9717 12.4429 19.1769C13.4746 19.3821 14.5439 19.2768 15.5156 18.8743C16.4874 18.4718 17.318 17.7901 17.9024 16.9156C18.4867 16.041 18.7986 15.0128 18.7986 13.9609C18.7986 12.5505 18.2383 11.1978 17.241 10.2004C16.2436 9.20306 14.8909 8.64276 13.4805 8.64276ZM26.4805 14.5518H20.5714V13.37H26.4805V14.5518ZM14.0714 6.87003H12.8896V0.960938H14.0714V6.87003ZM6.38956 14.5518H0.480469V13.37H6.38956V14.5518ZM14.0714 26.9609H12.8896V21.0518H14.0714V26.9609Z"
+                                        fill="#F15642" />
+                                </svg>
+                            </div>
+                            <div class="save-all-txt">
+                                <div class="ninety-five fw-700 fs-20 lh-150 white-color ff-jakrta">95%</div>
+                                <div class="saving-txt fw-400 fs-16 lh-150 ff-jakrta white-color">Cost savings</div>
+                            </div>
+                        </div>
+                        <div class="overflowX-scroll position-relative z-1">
+                            <div class="d-flex d-lg-none gap-2 gap-sm-4 pt-3">
+                                <div class="saving-card1 d-flex commen-save-card align-items-center gap-20">
+                                    <div class="save-svg1 save-svg d-flex justify-content-center align-items-center">
+                                        <svg width="30" height="27" viewBox="0 0 30 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M26.2148 13.4462C27.363 12.6126 28.2321 11.5244 28.7635 10.3105C29.1296 11.3001 29.3213 12.4093 29.3213 13.6478C29.3213 16.6044 28.1859 18.6757 27.0215 20.01C26.4437 20.6723 25.8638 21.1479 25.4221 21.4615C25.335 21.5232 25.2532 21.5786 25.1776 21.6283V23.6152C25.1776 25.1931 23.7861 26.4723 22.0698 26.4723H21.0339C19.8896 26.4723 18.962 25.6194 18.962 24.5676H14.8184C14.8184 25.6194 13.8908 26.4723 12.7465 26.4723H11.7106C9.99423 26.4723 8.60281 25.1931 8.60281 23.6152V23.2089C8.42393 23.1565 8.2236 23.0917 8.00741 23.0114C7.17879 22.7039 6.09911 22.1647 5.10289 21.2363C3.87615 20.0931 3.18896 18.6624 2.84457 17.7647C2.73184 17.4708 2.50599 17.2858 2.28621 17.2287C1.12036 16.9258 0.31543 15.9476 0.31543 14.8338V13.3215C0.31543 12.2245 1.10627 11.2604 2.25346 10.9589C2.4676 10.9026 2.69992 10.7102 2.81424 10.3925C3.09326 9.61687 3.63138 8.47075 4.61758 7.55167C5.42433 6.79982 6.29503 6.24412 6.95597 5.87822C7.15625 5.76732 7.33924 5.67279 7.49784 5.59456V2.01824C7.49784 1.34492 7.97799 0.869664 8.49398 0.67713C9.00571 0.486216 9.6918 0.51814 10.2049 0.963835C10.7286 1.41867 11.4171 1.96273 12.1534 2.4058C12.9085 2.86016 13.617 3.14865 14.1949 3.20252L14.2059 3.20355C13.1119 4.6965 12.6081 6.52452 12.8424 8.35517C13.0931 10.3137 14.7418 11.4914 16.1258 12.0184L21.0755 13.9028C22.4597 14.4298 24.5314 14.6684 26.2148 13.4462ZM8.08485 12.1856C8.94303 12.1856 9.63874 11.546 9.63874 10.7571C9.63874 9.96811 8.94303 9.3285 8.08485 9.3285C7.22667 9.3285 6.53097 9.96811 6.53097 10.7571C6.53097 11.546 7.22667 12.1856 8.08485 12.1856Z"
+                                                fill="#8048F8" />
+                                        </svg>
+                                    </div>
+                                    <div class="save-all-txt">
+                                        <div class="ninety-five fw-700 fs-20 lh-150 white-color ff-jakrta">95%</div>
+                                        <div class="saving-txt fw-400 fs-16 lh-150 ff-jakrta white-color text-nowrap">
+                                            Cost
+                                            savings</div>
+                                    </div>
+                                </div>
+
+                                <div class="saving-card2 d-flex commen-save-card align-items-center gap-20">
+                                    <div class="save-svg2 save-svg d-flex justify-content-center align-items-center">
+                                        <svg width="25" height="28" viewBox="0 0 25 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15.3526 0.191406H3.54006C1.90845 0.191406 0.60168 1.40636 0.60168 2.90639L0.586914 24.6263C0.586914 26.1263 1.89368 27.3413 3.52529 27.3413H21.2589C22.8905 27.3413 24.2121 26.1263 24.2121 24.6263V8.33636L15.3526 0.191406ZM18.3058 21.9113H6.4932V19.1963H18.3058V21.9113ZM18.3058 16.4813H6.4932V13.7663H18.3058V16.4813ZM13.8761 9.69386V2.22765L21.9972 9.69386H13.8761Z"
+                                                fill="#0389FF" />
+                                        </svg>
+                                    </div>
+                                    <div class="save-all-txt">
+                                        <div class="ninety-five fw-700 fs-20 lh-150 white-color ff-jakrta">47+</div>
+                                        <div class="saving-txt fw-400 fs-16 lh-150 ff-jakrta white-color text-nowrap">
+                                            File
+                                            formats</div>
+                                    </div>
+                                </div>
+
+                                <div class="saving-card3 d-flex commen-save-card align-items-center gap-20">
+                                    <div class="save-svg3 save-svg d-flex justify-content-center align-items-center">
+                                        <svg width="23" height="28" viewBox="0 0 23 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.0948 16.4959C14.9213 16.4959 13.7742 16.8158 12.7986 17.4151C11.8229 18.0145 11.0624 18.8664 10.6134 19.863C10.1643 20.8597 10.0468 21.9565 10.2757 23.0145C10.5047 24.0726 11.0697 25.0445 11.8995 25.8073C12.7292 26.5702 13.7864 27.0897 14.9373 27.3001C16.0882 27.5106 17.2811 27.4026 18.3652 26.9897C19.4493 26.5769 20.376 25.8778 21.0279 24.9808C21.6798 24.0838 22.0278 23.0292 22.0278 21.9504C22.0278 21.2341 21.8743 20.5248 21.5762 19.863C21.278 19.2013 20.841 18.6 20.29 18.0935C19.7391 17.587 19.0851 17.1852 18.3652 16.9111C17.6454 16.6369 16.8739 16.4959 16.0948 16.4959ZM18.0724 20.7383H15.4355V21.3443H17.4132C17.588 21.3443 17.7557 21.4082 17.8794 21.5219C18.003 21.6355 18.0724 21.7897 18.0724 21.9504V23.7686C18.0724 23.9293 18.003 24.0835 17.8794 24.1971C17.7557 24.3108 17.588 24.3746 17.4132 24.3746H16.754V24.9807H15.4355V24.3746H14.1171V23.1625H16.754V22.5565H14.7763C14.6015 22.5565 14.4338 22.4926 14.3102 22.379C14.1865 22.2653 14.1171 22.1111 14.1171 21.9504V20.1322C14.1171 19.9715 14.1865 19.8173 14.3102 19.7037C14.4338 19.59 14.6015 19.5262 14.7763 19.5262H15.4355V18.9201H16.754V19.5262H18.0724V20.7383ZM9.50253 8.01101C8.80318 8.01101 8.13247 7.7556 7.63796 7.30096C7.14345 6.84633 6.86563 6.22971 6.86563 5.58677V4.37464H12.1394V5.58677C12.1394 6.22971 11.8616 6.84633 11.3671 7.30096C10.8726 7.7556 10.2019 8.01101 9.50253 8.01101ZM9.50253 17.708C10.0296 17.706 10.5447 17.8519 10.9792 18.1262C10.166 19.046 9.66405 20.1649 9.53549 21.3443H6.86563V20.1322C6.86563 19.4893 7.14345 18.8727 7.63796 18.418C8.13247 17.9634 8.80318 17.708 9.50253 17.708ZM9.80577 23.7686C9.94892 24.1914 10.1435 24.598 10.3859 24.9807H0.932617V23.7686H2.25106V20.7383C2.24425 19.3948 2.68198 18.0811 3.50614 16.9716C4.33031 15.8621 5.50197 15.0092 6.86563 14.5262V11.1928C5.50197 10.7098 4.33031 9.85689 3.50614 8.74739C2.68198 7.6379 2.24425 6.32423 2.25106 4.98071V1.9504H0.932617V0.738281H18.0724V1.9504H16.754V4.98071C16.7608 6.32423 16.3231 7.6379 15.4989 8.74739C14.6747 9.85689 13.5031 10.7098 12.1394 11.1928V14.5262C13.0783 14.865 13.9295 15.3812 14.6379 16.0413C13.6422 16.2453 12.7121 16.6604 11.9219 17.2534C11.4068 16.8898 10.8023 16.6484 10.1617 16.5504V9.16858C11.0827 9.02547 11.9189 8.58732 12.5222 7.93175C13.1255 7.27618 13.4569 6.44548 13.4579 5.58677V3.76858C13.4579 3.60785 13.3884 3.45369 13.2648 3.34003C13.1412 3.22638 12.9735 3.16252 12.7986 3.16252H6.20641C6.03157 3.16252 5.86389 3.22638 5.74027 3.34003C5.61664 3.45369 5.54718 3.60785 5.54718 3.76858V5.58677C5.54813 6.44548 5.87959 7.27618 6.48288 7.93175C7.08616 8.58732 7.92233 9.02547 8.8433 9.16858V16.5504C7.92233 16.6935 7.08616 17.1317 6.48288 17.7872C5.87959 18.4428 5.54813 19.2735 5.54718 20.1322V21.9504C5.54718 22.1111 5.61664 22.2653 5.74027 22.379C5.86389 22.4926 6.03157 22.5565 6.20641 22.5565H9.53549C9.58099 22.9678 9.67155 23.3739 9.80577 23.7686Z"
+                                                fill="#23A566" />
+                                        </svg>
+                                    </div>
+                                    <div class="save-all-txt">
+                                        <div class="ninety-five fw-700 fs-20 lh-150 white-color ff-jakrta">95%</div>
+                                        <div class="saving-txt fw-400 fs-16 lh-150 ff-jakrta white-color text-nowrap">
+                                            Time
+                                            savings</div>
+                                    </div>
+                                </div>
+
+                                <div class="saving-card4 d-flex commen-save-card align-items-center gap-20">
+                                    <div class="save-svg4 save-svg d-flex justify-content-center align-items-center">
+                                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.6623 2.79866V5.1623C16.589 5.42275 18.3766 6.30945 19.7497 7.68581C21.1229 9.06217 22.0054 10.8518 22.2614 12.7791H24.625C24.3548 10.2275 23.2188 7.84551 21.4061 6.02957C19.5934 4.21364 17.2134 3.07339 14.6623 2.79866ZM2.3182 12.7791H4.68183C4.94228 10.8524 5.82898 9.06484 7.20534 7.69168C8.58171 6.31852 10.3714 5.43599 12.2986 5.18003V2.81639C9.74708 3.08658 7.36504 4.2226 5.54911 6.03531C3.73317 7.84801 2.59292 10.228 2.3182 12.7791ZM22.2614 15.1428C22.0018 17.0668 21.1177 18.8525 19.7448 20.2253C18.372 21.5982 16.5864 22.4823 14.6623 22.7418V25.1055C17.2139 24.8353 19.5959 23.6993 21.4118 21.8866C23.2278 20.0739 24.368 17.6938 24.6427 15.1428H22.2614ZM4.69956 15.1428H2.33592C2.60612 17.6943 3.74213 20.0764 5.55484 21.8923C7.36754 23.7082 9.74756 24.8485 12.2986 25.1232V22.7596C10.372 22.4991 8.58437 21.6124 7.21121 20.2361C5.83805 18.8597 4.95552 17.07 4.69956 15.1428ZM13.4805 8.64276C12.4286 8.64276 11.4004 8.95466 10.5258 9.53903C9.65127 10.1234 8.96963 10.954 8.56711 11.9258C8.16459 12.8975 8.05927 13.9668 8.26447 14.9985C8.46968 16.0301 8.97618 16.9777 9.71995 17.7215C10.4637 18.4652 11.4113 18.9717 12.4429 19.1769C13.4746 19.3821 14.5439 19.2768 15.5156 18.8743C16.4874 18.4718 17.318 17.7901 17.9024 16.9156C18.4867 16.041 18.7986 15.0128 18.7986 13.9609C18.7986 12.5505 18.2383 11.1978 17.241 10.2004C16.2436 9.20306 14.8909 8.64276 13.4805 8.64276ZM26.4805 14.5518H20.5714V13.37H26.4805V14.5518ZM14.0714 6.87003H12.8896V0.960938H14.0714V6.87003ZM6.38956 14.5518H0.480469V13.37H6.38956V14.5518ZM14.0714 26.9609H12.8896V21.0518H14.0714V26.9609Z"
+                                                fill="#F15642" />
+                                        </svg>
+                                    </div>
+                                    <div class="save-all-txt">
+                                        <div class="ninety-five fw-700 fs-20 lh-150 white-color ff-jakrta">95%</div>
+                                        <div class="saving-txt fw-400 fs-16 lh-150 ff-jakrta white-color text-nowrap">
+                                            Cost
+                                            savings</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/images/sec1-middle.png" alt="sec1-middle" class="position-absolute sec1-left">
+            </section>
+
+            <section class="section2">
+                <div class="sec2-txt fw-300 fs-20 lh-150 ff-jakrta text-center px-3">In collaboration with</div>
+                <div class="slider overflow-hidden">
+                    <div class="slider2">
+                        <img src="./assets/images/image-100.png" alt="cbc2" class="slider1-img commen-slider">
+                    </div>
+                    <div class="slider3">
+                        <img src="./assets/images/image-101.png" alt="cbc2" class="slider2-img commen-slider">
+                    </div>
+                    <div class="slider4">
+                        <img src="./assets/images/image-102.png" alt="cbc2" class="slider3-img commen-slider">
+                    </div>
+                    <div class="slider5">
+                        <img src="./assets/images/image-103.png" alt="cbc2" class="slider4-img commen-slider">
+                    </div>
+                    <div class="slider7">
+                        <img src="./assets/images/image-105.png" alt="cbc2" class="slider5-img commen-slider">
+                    </div>
+                    <div class="slider7">
+                        <img src="./assets/images/image-106.png" alt="cbc2" class="slider6-img commen-slider">
+                    </div>
+                    <div class="slider7">
+                        <img src="./assets/images/image-107.png" alt="cbc2" class="slider7-img commen-slider">
+                    </div>
+                </div>
+
+                <div class="my_container mx-auto mt-28">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-12 col-md-6" data-aos="zoom-out-right">
+                            <img src="./assets/images/ai.png" alt="ai-img" class="ai-img w-100">
+                        </div>
+                        <div class="col-12 col-md-6 d-flex justify-content-center">
+                            <div class="mw-459 d-flex flex-column align-items-center align-items-md-start">
+                                <div class="fw-500 fs-44 lh-150 ff-jakrta white-color text-center text-md-start">
+                                    Compliance
+                                    Security Trust</div>
+                                <div class="sec2-p fw-400 fs-16 lh-150 ff-jakrta text-center text-md-start">Posuere
+                                    ultrices
+                                    aliquet risus malesuada
+                                    viverra nec praesent. Sed nisl facilisi augue.</div>
+                                <button
+                                    class="demo-btn commen-btn try-btn fw-600 fs-16 lh-150 white-color ff-jakrta d-flex justify-content-center align-items-center position-relative z-1">Watch
+                                    demo video</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section3 position-relative">
+                <div class="my_container mx-auto position-relative z-1">
+                    <div
+                        class="row align-items-center justify-content-center justify-content-lg-between gap-4 gap-md-0">
+                        <div class="col-12 col-md-5 d-flex justify-content-center justify-content-md-start">
+                            <div class="mw-474 d-flex flex-column align-items-center align-items-md-start">
+                                <div class="fw-500 fs-44 lh-150 ff-jakrta white-color text-center text-md-start">
+                                    How we can help?</div>
+                                <div class="sec2-p fw-400 fs-16 lh-150 ff-jakrta text-center text-md-start">Whether you
+                                    handle financial, government, healthcare, or legal information, iDox.ai allows
+                                    organizations to reduce risk
+                                    of human error, combat time sensitive redaction requests, avoid costly penalties at
+                                    a
+                                    fraction of the price.</div>
+                                <button
+                                    class="demo-btn commen-btn try-btn fw-600 fs-16 lh-150 white-color ff-jakrta d-flex justify-content-center align-items-center">Watch
+                                    demo video</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+                            <div class="mw-531">
+                                <div
+                                    class="time-saving d-flex align-items-center flex-column flex-sm-row align-items-sm-start">
+                                    <div class="time-svg d-flex justify-content-center align-items-center">
+                                        <svg width="30" height="29" viewBox="0 0 30 29" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M14.9913 0.492188V2.10643L14.1228 2.17209C13.6415 2.21039 12.9223 2.30342 12.5295 2.38002C12.1312 2.4621 11.4729 2.63721 11.0635 2.76854C10.6542 2.89986 9.9903 3.16799 9.59752 3.35404C9.19921 3.54556 8.66812 3.8301 8.40811 3.98879C8.1481 4.14748 7.71106 4.44844 7.43999 4.6509C7.16338 4.85884 6.69315 5.25282 6.39442 5.53736C6.09015 5.81644 5.64758 6.28156 5.4097 6.5661C5.16629 6.85064 4.79563 7.34312 4.57988 7.6605C4.36966 7.97787 4.0156 8.59074 3.79432 9.0285C3.57304 9.46626 3.27983 10.1667 3.14153 10.588C2.99769 11.0094 2.82067 11.6605 2.74322 12.0381C2.66577 12.4157 2.57725 13.0066 2.54959 13.3514C2.5164 13.6961 2.48874 14.2159 2.48874 14.5005C2.48874 14.785 2.5164 15.3049 2.54959 15.6496C2.57725 15.9943 2.66577 16.5798 2.74322 16.9519C2.81513 17.3186 2.99216 17.9697 3.136 18.402C3.27983 18.8288 3.57304 19.5347 3.79432 19.9725C4.0156 20.4102 4.36966 21.0231 4.57988 21.3405C4.79563 21.6579 5.16629 22.1503 5.4097 22.4349C5.64758 22.7194 6.09015 23.1845 6.39442 23.4636C6.69315 23.7427 7.16338 24.1421 7.43999 24.3501C7.71106 24.5525 8.1481 24.848 8.40811 25.0122C8.66812 25.1709 9.19921 25.4554 9.59752 25.6469C9.9903 25.833 10.6542 26.1011 11.0635 26.2324C11.4729 26.3638 12.1312 26.5389 12.5295 26.6155C12.9223 26.6921 13.5198 26.7796 13.8573 26.8125C14.1892 26.8398 14.7037 26.8672 14.9913 26.8672C15.279 26.8672 15.8046 26.8398 16.1531 26.807C16.5016 26.7796 17.0991 26.6921 17.4808 26.6155C17.8625 26.5389 18.5098 26.3692 18.9191 26.2324C19.3285 26.1011 19.9868 25.833 20.3852 25.6469C20.7779 25.4554 21.3146 25.1709 21.5746 25.0122C21.8346 24.8535 22.2661 24.5525 22.5427 24.3501C22.8138 24.1476 23.2895 23.7482 23.5883 23.4691C23.887 23.1845 24.3351 22.7194 24.573 22.4349C24.8164 22.1503 25.187 21.6579 25.4028 21.3405C25.613 21.0231 25.9671 20.4102 26.1884 19.9725C26.4096 19.5347 26.7028 18.8343 26.8412 18.413C26.9795 17.9916 27.162 17.3405 27.2339 16.9629C27.3114 16.5853 27.4054 15.956 27.4442 15.5675C27.4829 15.1407 27.4939 14.5224 27.4718 14.0354C27.4552 13.5867 27.3888 12.9191 27.3335 12.5579C27.2727 12.1968 27.162 11.666 27.0846 11.3815C27.0071 11.0969 26.8688 10.6373 26.7748 10.3691C26.6807 10.0955 26.4262 9.52098 26.2105 9.08322C26.0003 8.64546 25.6407 8.01618 25.4194 7.68786C25.1981 7.35407 24.8053 6.8397 24.5564 6.53874C24.147 6.06268 24.0917 6.00796 24.0751 6.12834C24.0696 6.20495 24.0972 6.64818 24.1359 7.1133C24.1802 7.57842 24.2023 7.9724 24.1913 7.98882C24.1747 8.00523 23.8095 8.04354 23.3836 8.07637C22.9521 8.11467 22.5925 8.13656 22.5814 8.13109C22.5704 8.13109 22.4708 7.09688 22.3601 5.8438C22.2495 4.59071 22.1776 3.54556 22.1997 3.5182C22.2274 3.49631 23.2785 3.38687 24.5343 3.2829C25.7956 3.17894 26.8356 3.10233 26.8467 3.11874C26.8633 3.13516 26.902 3.50178 26.9352 3.93954C26.9739 4.3773 26.996 4.73845 26.985 4.73845C26.9739 4.74393 26.6088 4.77676 26.1662 4.80959C25.7237 4.84789 25.353 4.8862 25.3364 4.89714C25.3198 4.91356 25.4194 5.03941 25.5577 5.18168C25.696 5.32943 25.9726 5.65228 26.1773 5.90946C26.3765 6.16664 26.7084 6.63176 26.9186 6.94914C27.1233 7.26651 27.4607 7.85749 27.6654 8.26242C27.8701 8.66734 28.1246 9.23643 28.2297 9.52098C28.3404 9.80552 28.5008 10.298 28.5948 10.6154C28.6833 10.9327 28.8106 11.4362 28.8714 11.7371C28.9323 12.0381 29.0097 12.4813 29.0485 12.7221C29.0817 12.9629 29.1259 13.6414 29.137 14.2269C29.1591 15.0258 29.1425 15.4745 29.0761 16.0053C29.0263 16.3938 28.9212 17.0121 28.8493 17.3733C28.7774 17.7344 28.6114 18.3473 28.4842 18.7413C28.357 19.1298 28.1301 19.7372 27.9808 20.0819C27.8314 20.4267 27.5714 20.9574 27.3999 21.2584C27.2284 21.5594 26.9518 22.0135 26.7748 22.2707C26.6033 22.5279 26.2824 22.9547 26.0611 23.2283C25.8454 23.4964 25.3862 23.9999 25.0432 24.3446C24.7058 24.6839 24.1747 25.1654 23.8704 25.4062C23.5661 25.6469 23.0406 26.0245 22.7087 26.2434C22.3712 26.4568 21.8401 26.7687 21.5192 26.9383C21.1984 27.1025 20.6396 27.3542 20.2745 27.5019C19.9094 27.6442 19.3341 27.8412 19.0021 27.9342C18.6647 28.0327 18.1944 28.1531 17.951 28.2024C17.7076 28.2516 17.171 28.3392 16.7616 28.3993C16.2195 28.4814 15.7326 28.5088 14.9913 28.5088C14.239 28.5088 13.7632 28.4814 13.1934 28.3939C12.7674 28.3337 12.181 28.2297 11.8933 28.1695C11.6057 28.1093 11.058 27.9616 10.6763 27.8412C10.2946 27.7208 9.70816 27.5019 9.37623 27.3651C9.03877 27.2229 8.50769 26.9602 8.18683 26.7851C7.86596 26.61 7.39573 26.3309 7.13572 26.1558C6.87571 25.9862 6.43868 25.6688 6.1676 25.4499C5.891 25.2365 5.38757 24.7824 5.03905 24.4431C4.69606 24.1093 4.20923 23.584 3.96582 23.283C3.7224 22.9821 3.37941 22.5279 3.20792 22.2707C3.03642 22.0135 2.76535 21.5812 2.61045 21.3131C2.45555 21.0395 2.21213 20.5635 2.07383 20.2461C1.92999 19.9287 1.70871 19.3651 1.57594 18.9875C1.4487 18.61 1.2772 18.019 1.19422 17.6742C1.11677 17.3295 1.0006 16.6893 0.939744 16.2515C0.862294 15.7098 0.829102 15.1626 0.829102 14.5278C0.829102 13.9205 0.862294 13.324 0.934212 12.8042C0.995065 12.3664 1.10571 11.7152 1.18869 11.3541C1.27167 10.9929 1.4487 10.391 1.57594 10.0135C1.70871 9.63589 1.92999 9.07227 2.07383 8.7549C2.21213 8.43752 2.45555 7.95599 2.61045 7.68786C2.76535 7.41426 3.03642 6.98744 3.20792 6.73026C3.37941 6.47308 3.7224 6.0189 3.96582 5.71794C4.20923 5.41698 4.69606 4.89167 5.03905 4.55788C5.38757 4.21861 5.891 3.76444 6.1676 3.55103C6.43868 3.33215 6.87571 3.01478 7.13572 2.84514C7.39573 2.67004 7.8549 2.39644 8.15917 2.22681C8.46343 2.05718 9.00005 1.79999 9.34857 1.65225C9.6971 1.50451 10.2946 1.28015 10.6763 1.15977C11.058 1.03939 11.6278 0.886171 11.9487 0.815035C12.2695 0.749371 12.8172 0.650875 13.1657 0.601627C13.5143 0.546907 14.0675 0.503131 14.9913 0.492188ZM14.1615 5.85474V7.76994H15.8212V6.81234C15.8212 6.08456 15.8378 5.85474 15.8931 5.85474C15.9263 5.85474 16.1807 5.89304 16.4574 5.93682C16.7284 5.9806 17.171 6.07909 17.4421 6.1557C17.7076 6.23231 18.1557 6.391 18.4323 6.51138C18.7145 6.63176 19.146 6.84517 19.3894 6.98744C19.6328 7.12424 20.0034 7.36501 20.2192 7.5237C20.4294 7.67691 20.7779 7.96146 20.9882 8.15845C21.1984 8.34997 21.5248 8.6947 21.7129 8.91906C21.901 9.14341 22.2052 9.54834 22.3823 9.82193C22.5593 10.0901 22.8082 10.5333 22.9355 10.8069C23.0682 11.075 23.2453 11.5183 23.3338 11.7919C23.4223 12.06 23.5385 12.4813 23.5827 12.7221C23.6325 12.9629 23.6878 13.2748 23.7321 13.6797H21.7959V15.3213H23.7321L23.7044 15.5785C23.6878 15.7262 23.6325 16.0381 23.5827 16.2789C23.5385 16.5197 23.4223 16.9355 23.3338 17.2091C23.2453 17.4773 23.0682 17.9205 22.9355 18.1941C22.8082 18.4622 22.5593 18.9054 22.3823 19.179C22.2052 19.4472 21.901 19.8576 21.7129 20.0819C21.5192 20.3063 21.2316 20.6182 21.0656 20.7714C20.9052 20.9246 20.6507 21.149 20.4958 21.2693C20.3464 21.3897 19.9924 21.636 19.7213 21.8111C19.4447 21.9862 18.9966 22.2324 18.7255 22.3583C18.4489 22.4896 18.0008 22.6647 17.7297 22.7523C17.4531 22.8398 17.0327 22.9547 16.7893 22.9985C16.5459 23.0477 16.2305 23.1025 15.8212 23.1462V21.231H14.1615V23.1462L13.9015 23.1189C13.7521 23.1025 13.4368 23.0477 13.1934 22.9985C12.95 22.9547 12.524 22.8398 12.2529 22.7523C11.9763 22.6647 11.5172 22.4841 11.2295 22.3473C10.9418 22.2105 10.4661 21.9424 10.1784 21.7564C9.89072 21.5648 9.45368 21.242 9.2158 21.034C8.97239 20.8261 8.60174 20.4595 8.39152 20.2187C8.17576 19.978 7.84937 19.5457 7.65574 19.2611C7.46765 18.9766 7.19658 18.506 7.05827 18.2214C6.91997 17.9369 6.73741 17.4773 6.6489 17.2091C6.56038 16.9355 6.44421 16.5197 6.39995 16.2789C6.35016 16.0381 6.29484 15.7262 6.25058 15.3213H8.18683V13.6797H6.25058L6.27824 13.417C6.29484 13.2748 6.35016 12.9629 6.39995 12.7221C6.44421 12.4813 6.56038 12.06 6.6489 11.7919C6.73741 11.5183 6.91997 11.0641 7.05827 10.7795C7.19658 10.495 7.46765 10.0244 7.65574 9.73985C7.84937 9.45531 8.17576 9.02302 8.39152 8.78226C8.60174 8.54149 8.97239 8.17487 9.2158 7.96693C9.45368 7.75899 9.87412 7.44162 10.1507 7.26104C10.4218 7.08594 10.8146 6.85611 11.0248 6.75215C11.2295 6.64818 11.578 6.49496 11.7993 6.40741C12.0151 6.31986 12.3857 6.19948 12.6125 6.13381C12.8393 6.07362 13.2266 5.98607 13.47 5.94229C13.7134 5.89852 13.9679 5.86021 14.1615 5.85474ZM14.1339 14.1393L11.6333 16.2242C12.1589 16.8534 12.3968 17.1325 12.5074 17.2584L12.7066 17.4827L15.7935 14.9054L15.8212 9.52098H14.1615L14.1339 14.1393Z"
+                                                fill="#016EE8" />
+                                        </svg>
+                                    </div>
+                                    <div class="time-txt">
+                                        <div class="fw-500 fs-18 lh-150  ff-jakrta ai-time-color">Time-Saving AI
+                                            Integrations
+                                        </div>
+                                        <div class="ai-txt fw-400 fs-16 lh-150 ff-jakrta color-b1">Posuere ultrices
+                                            aliquet
+                                            risus malesuada viverra nec praesent. Sed nisl facilisi augue.</div>
+                                    </div>
+                                </div>
+                                <div class="next-time-box fw-500 fs-18 lh-150  ff-jakrta color-b1">Enterprise-Level
+                                    Scalability
+                                </div>
+                                <div class="next-time-box fw-500 fs-18 lh-150  ff-jakrta color-b1">Cloud-Based For
+                                    Multiple
+                                    Locations
+                                </div>
+                                <div class="next-time-box fw-500 fs-18 lh-150  ff-jakrta color-b1">Collaborative Work
+                                    Among
+                                    Teams
+                                </div>
+                                <div class="next-time-box fw-500 fs-18 lh-150  ff-jakrta color-b1">Proactive Risk
+                                    Assessment
+                                    Reports
+                                </div>
+                                <div class="next-time-box fw-500 fs-18 lh-150  ff-jakrta color-b1">High Accuracy To
+                                    Avoid
+                                    Oversights
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/images/sec3-right.png" alt="sec3-right"
+                    class="sec3-right position-absolute d-none d-sm-inline">
+                <img src="./assets/images/sec3-left.png" alt="sec3-left" class="sec3-left position-absolute">
+            </section>
+
+            <section class="section4 position-relative">
+                <div class="my_container mx-auto">
+                    <div class="row align-items-center gap-4 gap-md-0">
+                        <div class="col-12 col-md-5 col-lg-6 d-flex justify-content-center justify-content-md-start">
+                            <div class="mw-416 position-relative z-1">
+                                <div
+                                    class="fw-500 fs-44 lh-150 ff-jakrta white-color text-center text-md-start mb-44 mb-lg-44">
+                                    How
+                                    We
+                                    Bring Value</div>
+
+                                <div
+                                    class="position-relative z-1 another-box next-time-box mb-16 d-flex align-items-center gap-14 pr-12">
+                                    <div class="tick-svg d-flex justify-content-center align-items-center">
+                                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.8794 15.5524L20.9097 8.52209L19.1677 6.71786L13.8794 12.0061L11.2042 9.39309L9.46214 11.1351L13.8794 15.5524ZM8.0312 20.4673C7.34684 20.4673 6.76078 20.2234 6.27302 19.7357C5.78525 19.2479 5.54178 18.6623 5.54261 17.9787V3.04719C5.54261 2.36282 5.7865 1.77676 6.27426 1.289C6.76202 0.801233 7.34767 0.557766 8.0312 0.558596H22.9628C23.6471 0.558596 24.2332 0.802478 24.7209 1.29024C25.2087 1.77801 25.4522 2.36365 25.4513 3.04719V17.9787C25.4513 18.6631 25.2075 19.2492 24.7197 19.7369C24.2319 20.2247 23.6463 20.4682 22.9628 20.4673H8.0312ZM3.05402 25.4445C2.36966 25.4445 1.7836 25.2006 1.29583 24.7129C0.808069 24.2251 0.564602 23.6394 0.565432 22.9559V5.53578H3.05402V22.9559H20.4742V25.4445H3.05402Z"
+                                                fill="#0389FF" />
+                                        </svg>
+                                    </div>
+                                    <div class="fw-500 fs-18 lh-150  ff-jakrta color-b1">High Accuracy Rate
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="position-relative z-1 another-box next-time-box mb-16 d-flex align-items-center gap-14 pr-12">
+                                    <div class="tick-svg d-flex justify-content-center align-items-center">
+                                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.8794 15.5524L20.9097 8.52209L19.1677 6.71786L13.8794 12.0061L11.2042 9.39309L9.46214 11.1351L13.8794 15.5524ZM8.0312 20.4673C7.34684 20.4673 6.76078 20.2234 6.27302 19.7357C5.78525 19.2479 5.54178 18.6623 5.54261 17.9787V3.04719C5.54261 2.36282 5.7865 1.77676 6.27426 1.289C6.76202 0.801233 7.34767 0.557766 8.0312 0.558596H22.9628C23.6471 0.558596 24.2332 0.802478 24.7209 1.29024C25.2087 1.77801 25.4522 2.36365 25.4513 3.04719V17.9787C25.4513 18.6631 25.2075 19.2492 24.7197 19.7369C24.2319 20.2247 23.6463 20.4682 22.9628 20.4673H8.0312ZM3.05402 25.4445C2.36966 25.4445 1.7836 25.2006 1.29583 24.7129C0.808069 24.2251 0.564602 23.6394 0.565432 22.9559V5.53578H3.05402V22.9559H20.4742V25.4445H3.05402Z"
+                                                fill="#0389FF" />
+                                        </svg>
+                                    </div>
+                                    <div class="fw-500 fs-18 lh-150  ff-jakrta color-b1">Time Saving
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="position-relative z-1 another-box next-time-box mb-16 d-flex align-items-center gap-14 pr-12">
+                                    <div class="tick-svg d-flex justify-content-center align-items-center">
+                                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.8794 15.5524L20.9097 8.52209L19.1677 6.71786L13.8794 12.0061L11.2042 9.39309L9.46214 11.1351L13.8794 15.5524ZM8.0312 20.4673C7.34684 20.4673 6.76078 20.2234 6.27302 19.7357C5.78525 19.2479 5.54178 18.6623 5.54261 17.9787V3.04719C5.54261 2.36282 5.7865 1.77676 6.27426 1.289C6.76202 0.801233 7.34767 0.557766 8.0312 0.558596H22.9628C23.6471 0.558596 24.2332 0.802478 24.7209 1.29024C25.2087 1.77801 25.4522 2.36365 25.4513 3.04719V17.9787C25.4513 18.6631 25.2075 19.2492 24.7197 19.7369C24.2319 20.2247 23.6463 20.4682 22.9628 20.4673H8.0312ZM3.05402 25.4445C2.36966 25.4445 1.7836 25.2006 1.29583 24.7129C0.808069 24.2251 0.564602 23.6394 0.565432 22.9559V5.53578H3.05402V22.9559H20.4742V25.4445H3.05402Z"
+                                                fill="#0389FF" />
+                                        </svg>
+                                    </div>
+                                    <div class="fw-500 fs-18 lh-150  ff-jakrta color-b1">Cost Saving
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="position-relative z-1 another-box next-time-box mb-0 d-flex align-items-center gap-14 pr-12">
+                                    <div class="tick-svg d-flex justify-content-center align-items-center">
+                                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.8794 15.5524L20.9097 8.52209L19.1677 6.71786L13.8794 12.0061L11.2042 9.39309L9.46214 11.1351L13.8794 15.5524ZM8.0312 20.4673C7.34684 20.4673 6.76078 20.2234 6.27302 19.7357C5.78525 19.2479 5.54178 18.6623 5.54261 17.9787V3.04719C5.54261 2.36282 5.7865 1.77676 6.27426 1.289C6.76202 0.801233 7.34767 0.557766 8.0312 0.558596H22.9628C23.6471 0.558596 24.2332 0.802478 24.7209 1.29024C25.2087 1.77801 25.4522 2.36365 25.4513 3.04719V17.9787C25.4513 18.6631 25.2075 19.2492 24.7197 19.7369C24.2319 20.2247 23.6463 20.4682 22.9628 20.4673H8.0312ZM3.05402 25.4445C2.36966 25.4445 1.7836 25.2006 1.29583 24.7129C0.808069 24.2251 0.564602 23.6394 0.565432 22.9559V5.53578H3.05402V22.9559H20.4742V25.4445H3.05402Z"
+                                                fill="#0389FF" />
+                                        </svg>
+                                    </div>
+                                    <div class="fw-500 fs-18 lh-150  ff-jakrta color-b1">Labor Hours Gained Back
+                                    </div>
+                                </div>
+
+                                <img src="./assets/images/sec4-middle.png" alt="sec4-middle"
+                                    class="middle-png position-absolute d-none d-md-inline-block">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-7 col-lg-6">
+                            <img src="./assets/images/mind.png" alt="mind" class="sec4-img w-100">
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/images/sec4-right.png" alt="sec4-right" class="sec4-right position-absolute">
+            </section>
+
+            <section class="section5 overflow-hidden position-relative">
+                <div class="sec5-txt fw-500 fs-44 lh-150 white-color ff-jakrta text-center px-3">Testimonials</div>
+                <div class="slick-slider2 position-relative z-1">
+                    <div class="slider2-box1 slider2-box">
+                        <div class="d-flex justify-content-center">
+                            <img src="./assets/images/image-107.png" alt="image-107" class="img-107 filter">
+                        </div>
+                        <div class="slider2-txt fs-20 fw-400 ff-jakrta white-color lh-150 text-center">“Quick, well
+                            designed, and
+                            saved
+                            our team over 97% of time. Our team was able to meet subject access requests and meet
+                            GDPR mandates using the iDox.ai redaction solution.”</div>
+                        <div class="slider2-txt2 fw-400 fs-14 lh-150 ff-jakrta white-color text-center">Carl Bevan</div>
+                    </div>
+
+                    <div class="slider2-box1 slider2-box">
+                        <div class="d-flex justify-content-center">
+                            <img src="./assets/images/image-107.png" alt="image-107" class="img-107 filter">
+                        </div>
+                        <div class="slider2-txt fs-20 fw-400 ff-jakrta white-color lh-150 text-center">“Quick, well
+                            designed, and
+                            saved
+                            our team over 97% of time. Our team was able to meet subject access requests and meet
+                            GDPR mandates using the iDox.ai redaction solution.”</div>
+                        <div class="slider2-txt2 fw-400 fs-14 lh-150 ff-jakrta white-color text-center">Carl Bevan</div>
+                    </div>
+
+                    <div class="slider2-box1 slider2-box">
+                        <div class="d-flex justify-content-center">
+                            <img src="./assets/images/image-107.png" alt="image-107" class="img-107 filter">
+                        </div>
+                        <div class="slider2-txt fs-20 fw-400 ff-jakrta white-color lh-150 text-center">“Quick, well
+                            designed, and
+                            saved
+                            our team over 97% of time. Our team was able to meet subject access requests and meet
+                            GDPR mandates using the iDox.ai redaction solution.”</div>
+                        <div class="slider2-txt2 fw-400 fs-14 lh-150 ff-jakrta white-color text-center">Carl Bevan</div>
+                    </div>
+
+                    <div class="slider2-box1 slider2-box">
+                        <div class="d-flex justify-content-center">
+                            <img src="./assets/images/image-107.png" alt="image-107" class="img-107 filter">
+                        </div>
+                        <div class="slider2-txt fs-20 fw-400 ff-jakrta white-color lh-150 text-center">“Quick, well
+                            designed, and
+                            saved
+                            our team over 97% of time. Our team was able to meet subject access requests and meet
+                            GDPR mandates using the iDox.ai redaction solution.”</div>
+                        <div class="slider2-txt2 fw-400 fs-14 lh-150 ff-jakrta white-color text-center">Carl Bevan</div>
+                    </div>
+                </div>
+                <img src="./assets/images/slider2-elips.png" alt="slider2-elips"
+                    class="slick-ellips position-absolute d-none d-md-inline">
+            </section>
+
+            <section class="section6 position-relative">
+                <div class="my_container mx-auto">
+                    <div class="row justify-content-between">
+
+                        <div class="col-12 col-md-7 d-flex justify-content-center justify-content-md-start">
+                            <div class="position-relative">
+                                <img src="./assets/images/sec6-img.png" alt="sec6-img" class="sec6-img w-93">
+                                <img src="./assets/images/sec6-middle.png" alt="sec6-middle"
+                                    class="middle-sec6 position-absolute">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-5 d-flex justify-content-center justify-content-md-start">
+                            <div class="mw-474 d-flex flex-column align-items-center align-items-md-start">
+                                <div class="fw-500 fs-44 lh-150 ff-jakrta white-color text-center text-md-start">
+                                    We provide secure solutions</div>
+                                <div class="sec2-p fw-400 fs-16 lh-150 ff-jakrta text-center text-md-start">For
+                                    nationwide
+                                    and global teams, our cloud-based solutions keep everyone on the same page, all
+                                    backed
+                                    by our SOC 2 and
+                                    ISO 27001 certifications.div>
+                                    <button
+                                        class="learn-btn commen-btn try-btn fw-600 fs-16 lh-150 white-color ff-jakrta d-flex justify-content-center align-items-center mx-auto mx-md-0 position-relative z-1">learn
+                                        more</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <img src="./assets/images/sec6-right.png" alt="sec6-right" class="sec6-right position-absolute">
+                </div>
+            </section>
+
+            <section class="section7 position-relative">
+                <div class="my_container mx-auto position-relative z-1">
+                    <div class="sec7-txt1 fw-500 fs-44 lh-150 white-color ff-jakrta text-center">How it works</div>
+                    <div class="sec7-txt2 fw-400 fs-16 lh-150 ff-jakrta color-b1 text-center">Only 2 minutes redacting a
+                        10
+                        page document</div>
+                    <div class="row justify-content-center">
+
+                        <div
+                            class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex flex-column align-items-center align-items-md-start position-relative">
+                            <div class="data-card d-flex justify-content-center align-items-center position-relative">
+                                <div class="sub-data-card">
+                                    <div class="get-txt ff-poppins fw-500 fs-16 lh-150 white-color">Get started</div>
+                                    <div class="drop-area d-flex flex-column align-items-center">
+                                        <div class="drop-svg">
+                                            <svg width="62" height="41" viewBox="0 0 62 41" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M28.0474 4.61182C26.4479 4.83251 23.8452 5.8532 22.2999 6.87389C19.5074 8.69458 16.9048 12.4187 16.3897 15.2325C16.1999 16.1704 16.1185 16.2808 15.3594 16.2808C12.4314 16.2808 9.28654 18.2118 7.98521 20.8325C7.28032 22.2394 7.17188 22.736 7.17188 24.667C7.17188 26.3498 7.33454 27.2049 7.76832 28.1704C8.55454 29.9084 10.127 31.6187 11.7537 32.5015C13.1363 33.2463 13.1905 33.2463 19.5888 33.3291C25.1465 33.4118 26.0141 33.3567 26.0141 32.998C26.0141 32.667 25.0923 32.5842 19.7243 32.5015C13.787 32.4187 13.3261 32.3911 12.2688 31.8118C10.7777 30.9842 9.39499 29.4946 8.66299 27.9498C6.35854 22.9291 9.77454 17.3566 15.2239 17.2739L16.7692 17.2463L17.0945 15.867C17.8265 12.6946 20.4834 8.94286 23.1945 7.2601C24.523 6.4601 27.0985 5.63251 28.915 5.41182C33.0088 4.91527 38.0243 7.09458 40.5457 10.4601L41.5217 11.7291L43.9888 11.7566C47.5132 11.8118 49.167 12.5015 51.5257 14.8739C53.8301 17.2187 54.5621 19.0118 54.5621 22.2118C54.5621 25.2739 53.803 27.2325 51.7968 29.2463C49.1128 31.9498 47.2421 32.5291 41.2777 32.5567C37.6719 32.5567 37.1297 32.6118 37.1297 32.998C37.1297 33.3842 37.6719 33.4118 42.091 33.3291C46.3474 33.2187 47.215 33.136 48.5163 32.6118C56.4328 29.4118 57.951 18.6808 51.2274 13.2739C49.2212 11.6739 47.215 10.9566 44.4497 10.9015L42.1452 10.8463L40.4101 9.02561C37.1568 5.57734 32.6834 3.97734 28.0474 4.61182Z"
+                                                    fill="#0389FF" />
+                                                <path
+                                                    d="M28.2375 21.7717C25.2824 25.0269 24.4419 26.2131 25.1739 26.2131C25.2824 26.2131 26.665 24.8338 28.2104 23.1235L31.0299 20.0614L31.1655 28.5028C31.2468 33.7993 31.4095 36.9993 31.5721 37.0545C31.7348 37.0821 31.8704 34.1028 31.9246 28.6131C31.9517 23.951 32.033 20.1442 32.1144 20.1442C32.1686 20.1442 32.8193 20.8062 33.5241 21.5786C36.8859 25.3304 37.889 26.2959 38.1873 26.1028C38.5126 25.8821 37.5366 24.6407 33.6868 20.4476L31.545 18.1304L28.2375 21.7717Z"
+                                                    fill="#0389FF" />
+                                            </svg>
+                                        </div>
+                                        <div class="drop-txt ff-poppins fw-500 fs-10 lh-150 white-color">Drop or click
+                                            to
+                                            select a file</div>
+
+                                        <button class="add-btn d-flex justify-content-center align-items-center">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="fw-500 fs-10 lh-150 ff-poppins white-color">Add Document
+                                                </div>
+                                                <div class="arrow-svg">
+                                                    <svg width="6" height="4" viewBox="0 0 6 4" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.07266 3.82195L0.607422 1.35671L1.42956 0.535156L3.07266 2.17884L4.71577 0.535156L5.53791 1.35671L3.07266 3.82195Z"
+                                                            fill="white" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="plus-box d-flex justify-content-center align-items-center position-absolute">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.5 24.5986V8.04688" stroke="#FBFDFF" stroke-width="2"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M8.22461 16.3242H24.7763" stroke="#FBFDFF" stroke-width="2"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="fw-500 fs-20 lh-150 white-color ff-jakrta pt-4">Click to select a file</div>
+                        </div>
+
+                        <div
+                            class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex flex-column align-items-center align-items-md-st position-relative d-md-flex flex-md-column align-items-md-center align-items-xl-start mt-4 mt-sm-0">
+                            <div class="data-card d-flex justify-content-center align-items-center position-relative">
+                                <div class="sub-data-card">
+                                    <div class="cursor d-flex align-items-center gap-2">
+                                        <input type="checkbox" name="checkbox" class="select-all">
+                                        <div class="fw-400 fs-14 lh-150 color-b1 ff-poppins">Select all</div>
+                                    </div>
+                                    <div class="cursor d-flex align-items-center gap-3 pt-12">
+                                        <input type="checkbox" name="checkbox">
+                                        <div class="d-flex align-items-center">
+                                            <svg width="11" height="14" viewBox="0 0 11 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M5.03096 0.591274C4.18643 0.734415 3.50222 1.08082 2.8953 1.67056C2.73784 1.82515 2.53458 2.05131 2.44584 2.17728C1.54405 3.42547 1.4553 5.00288 2.19391 6.51731C2.41721 6.96964 2.5947 7.21298 3.29323 8.02029L3.87438 8.69306L2.86381 8.70737L1.85323 8.72168L1.78452 8.79326C1.73013 8.84765 1.55264 9.36582 1.02588 10.989C0.645122 12.1571 0.335938 13.139 0.335938 13.1734C0.335938 13.2707 0.416096 13.3967 0.507707 13.4453C0.58214 13.4826 1.1862 13.4883 5.68082 13.4883C10.2499 13.4883 10.7795 13.4826 10.8368 13.4425C10.9141 13.3881 10.9856 13.2564 10.9856 13.1676C10.9856 13.1333 10.6764 12.1513 10.2986 10.9833C9.68877 9.11103 9.60003 8.85624 9.52273 8.78753L9.43971 8.70737H8.68679C7.96249 8.70737 7.931 8.71023 7.86802 8.76749C7.74778 8.882 7.71915 9.04805 7.79645 9.19691C7.87088 9.34292 7.97394 9.36582 8.54937 9.36582H9.06468L9.42539 10.4737C9.62579 11.0864 9.87772 11.8565 9.98651 12.1886C10.0953 12.5206 10.184 12.8012 10.184 12.8127C10.184 12.8212 8.14857 12.8298 5.65792 12.8298H1.13466L1.1547 12.764C1.18906 12.6523 1.64711 11.2438 1.95629 10.2876L2.25689 9.36582H3.35621H4.45554L4.85633 9.8296L5.25713 10.2962L4.9279 10.3106C4.59868 10.3249 4.59581 10.3249 4.51279 10.4193C4.45554 10.4852 4.42977 10.5424 4.42977 10.614C4.42977 10.7342 4.49562 10.8688 4.57005 10.9117C4.64735 10.9518 6.67422 10.9518 6.75152 10.9117C6.82595 10.8688 6.8918 10.7342 6.8918 10.614C6.8918 10.5424 6.86603 10.4852 6.80877 10.4193C6.72575 10.3249 6.72289 10.3249 6.39367 10.3106L6.06444 10.2962L7.3384 8.82188C8.03979 8.01171 8.68965 7.23874 8.78412 7.10705C9.37959 6.25966 9.70309 5.10308 9.61148 4.15549C9.5943 3.9694 9.55708 3.71747 9.52559 3.59437C9.15056 2.02841 7.87661 0.846066 6.2906 0.591274C5.96424 0.539743 5.33156 0.539743 5.03096 0.591274ZM6.2219 1.24972C7.04925 1.39573 7.81362 1.86809 8.33752 2.56662C8.53219 2.82427 8.76981 3.32527 8.85569 3.65449C8.9473 4.00376 8.97879 4.59636 8.92726 4.95994C8.83279 5.5869 8.53219 6.32837 8.16575 6.81218C7.97394 7.06984 5.68941 9.70936 5.66078 9.70936C5.63216 9.70936 3.37912 7.10419 3.16154 6.82077C2.68918 6.19668 2.36854 5.25195 2.36854 4.47326C2.36854 3.56861 2.70922 2.78133 3.37625 2.13433C3.85434 1.67056 4.43836 1.36996 5.08822 1.24972C5.38023 1.19819 5.91558 1.19819 6.2219 1.24972Z"
+                                                    fill="#FBFDFF" />
+                                                <path
+                                                    d="M5.23751 2.94011C4.77946 3.06894 4.41588 3.36953 4.21262 3.79609C4.08379 4.05947 4.04944 4.25987 4.06661 4.58623C4.10097 5.2819 4.56761 5.86019 5.23178 6.03196C5.46653 6.09494 5.87592 6.09208 6.10208 6.03196C6.6546 5.88595 7.11552 5.39927 7.23862 4.83816C7.29015 4.59482 7.25866 4.15681 7.17277 3.92492C7.02104 3.51267 6.66033 3.15196 6.24808 2.9945C5.99615 2.89717 5.48371 2.8714 5.23751 2.94011ZM5.97612 3.60428C6.32538 3.72452 6.57158 4.05088 6.60021 4.42019C6.63456 4.88969 6.33969 5.2819 5.86447 5.405C5.45794 5.50806 5.03997 5.31339 4.82812 4.92404C4.73651 4.75514 4.73079 4.72651 4.73079 4.48603C4.73079 4.26273 4.74224 4.20834 4.80808 4.08524C5.04284 3.63864 5.5152 3.44397 5.97612 3.60428Z"
+                                                    fill="#FBFDFF" />
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-14 lh-150 color-b1 ff-poppins">Address</div>
+                                    </div>
+
+                                    <div class="cursor d-flex align-items-center gap-3 pt-12">
+                                        <input type="checkbox" name="checkbox">
+                                        <div class="d-flex align-items-center">
+                                            <svg width="12" height="11" viewBox="0 0 12 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.25534 0.0354366C6.98857 0.0930605 6.73886 0.21471 6.50837 0.396119L6.38672 0.492158L6.51264 0.679969C6.58093 0.782411 6.65776 0.906195 6.68337 0.957416L6.73033 1.04919L6.84771 0.942477C7.45596 0.402521 8.27976 0.60954 8.67886 1.40347C8.82185 1.69158 8.89869 2.08215 8.87734 2.41935C8.80265 3.54621 7.92549 4.2441 7.10595 3.82793C7.04832 3.80019 6.99924 3.77884 6.99497 3.78311C6.9907 3.78738 6.96936 3.85354 6.94588 3.93251C6.92027 4.00934 6.87332 4.14166 6.83704 4.22489L6.77301 4.37642L6.87759 4.42978C7.04406 4.51301 7.37486 4.58984 7.57761 4.58984C8.58282 4.58984 9.39169 3.72762 9.50694 2.53246C9.56029 1.96476 9.4109 1.33731 9.10784 0.876316C8.98192 0.684237 8.70661 0.404655 8.5316 0.289408C8.15171 0.0397053 7.67365 -0.0542002 7.25534 0.0354366Z"
+                                                    fill="#FBFDFF" />
+                                                <path
+                                                    d="M3.98972 0.111326C3.75069 0.136937 3.58635 0.186024 3.34519 0.303405C2.47016 0.728114 1.93234 1.73973 1.97502 2.873C1.99423 3.36173 2.0732 3.67546 2.28875 4.11084C2.43388 4.40109 2.54272 4.55475 2.76041 4.77885C3.18939 5.21636 3.70587 5.42551 4.28851 5.39563C5.40683 5.34228 6.30107 4.33066 6.40564 3.00105C6.53583 1.34277 5.38336 -0.035934 3.98972 0.111326ZM4.53608 0.828422C4.9181 0.9394 5.28092 1.26593 5.49007 1.68637C5.66294 2.03212 5.73337 2.34371 5.73337 2.76629C5.73123 3.64558 5.29372 4.38402 4.61931 4.65079C4.49126 4.69988 4.44644 4.70628 4.19887 4.70842C3.9449 4.70842 3.90862 4.70415 3.76776 4.64866C2.90981 4.31359 2.45949 3.2102 2.73053 2.11535C2.86499 1.57326 3.23848 1.09093 3.68239 0.886045C3.93423 0.772932 4.2693 0.749455 4.53608 0.828422Z"
+                                                    fill="#FBFDFF" />
+                                                <path
+                                                    d="M9.53494 4.33472C9.5008 4.38167 9.39195 4.49692 9.29591 4.59296C9.19774 4.68686 9.11877 4.76796 9.11877 4.7701C9.11877 4.77436 9.17853 4.81918 9.25323 4.87254C9.43037 5.00059 9.72489 5.29084 9.85934 5.47439C9.97673 5.63018 10.1517 5.95032 10.2286 6.14453C10.3395 6.43051 10.4398 7.02382 10.4057 7.2031C10.3481 7.50189 9.86788 7.77933 9.11877 7.9458L8.89468 7.99702V8.30435C8.89255 8.47295 8.88614 8.63729 8.87547 8.66717L8.8584 8.72266L9.027 8.69491C9.43677 8.62235 9.93831 8.46869 10.2158 8.32996C10.442 8.21685 10.57 8.12935 10.728 7.97995C11.063 7.66836 11.1633 7.35036 11.1057 6.7976C11.0588 6.35368 10.9542 5.99513 10.7493 5.5811C10.5274 5.12651 10.1901 4.70394 9.81026 4.40088C9.70995 4.32191 9.62245 4.25575 9.61391 4.25362C9.60537 4.25148 9.57123 4.28776 9.53494 4.33472Z"
+                                                    fill="#FBFDFF" />
+                                                <path
+                                                    d="M1.81099 5.1592C1.29451 5.54549 0.899685 6.02355 0.611566 6.60619C0.389608 7.05865 0.267958 7.48549 0.216737 7.9977C0.159113 8.56113 0.257287 8.8898 0.581687 9.2206C1.15152 9.80324 2.37869 10.1575 3.95374 10.1959C5.05713 10.2215 5.97911 10.0978 6.81145 9.80751C7.50294 9.56634 7.97673 9.17152 8.13039 8.70839C8.19015 8.52912 8.18375 7.95075 8.11759 7.61994C7.92338 6.63821 7.38342 5.76745 6.59803 5.17627L6.38461 5.01621L6.14131 5.26591C6.00685 5.4025 5.90014 5.51775 5.90228 5.51775C6.86054 6.10465 7.48373 7.16963 7.49867 8.25167C7.5008 8.44161 7.49653 8.47576 7.44745 8.5718C7.23829 8.98584 6.39315 9.32518 5.23427 9.46604C4.83517 9.51512 3.95374 9.5322 3.5333 9.50018C2.70096 9.43616 2.02868 9.28676 1.53141 9.04987C1.18353 8.88553 1.00426 8.7276 0.910356 8.50564C0.880477 8.43521 0.876208 8.37759 0.889014 8.16844C0.940235 7.16749 1.46952 6.22204 2.29119 5.6522C2.39577 5.57964 2.48114 5.51348 2.48114 5.50494C2.48114 5.4964 2.42565 5.44091 2.35949 5.38329C2.29119 5.32353 2.18875 5.21682 2.12899 5.14639C2.07137 5.07596 2.01801 5.01834 2.01161 5.01834C2.00521 5.01621 1.91557 5.08023 1.81099 5.1592Z"
+                                                    fill="#FBFDFF" />
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-14 lh-150 color-b1 ff-poppins">Ages</div>
+                                    </div>
+
+                                    <div class="cursor d-flex align-items-center gap-3 pt-12">
+                                        <input type="checkbox" name="checkbox">
+                                        <div class="d-flex align-items-center">
+                                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.7" clip-path="url(#clip0_34717_11404)">
+                                                    <path
+                                                        d="M6.34357 1.04823C5.6565 1.36887 5.2328 1.80402 4.92361 2.4911C4.62588 3.15527 4.61443 4.27749 4.90071 5.11344C5.11828 5.73181 5.11828 5.74326 4.87781 6.23566C4.63733 6.72807 4.63733 6.72807 4.03041 6.72807C3.45785 6.72807 3.4235 6.71662 3.53801 6.49904C3.60672 6.38453 3.88155 6.0868 4.15638 5.85777C4.59153 5.49133 4.64878 5.41117 4.53427 5.22795C4.35105 4.93022 4.29379 4.95312 3.74413 5.43407C1.44242 7.51821 1.30501 11.3887 3.45785 13.7019C5.26715 15.6372 8.56512 16.0151 10.821 14.5264C12.5158 13.4271 13.3861 11.7781 13.3861 9.7054C13.3861 8.02206 12.7334 6.47614 11.5768 5.43407C11.0271 4.94167 10.9699 4.93022 10.7867 5.22795C10.6607 5.42262 10.6951 5.49133 11.0386 5.74326C11.2447 5.90358 11.531 6.18986 11.6684 6.38453L11.9089 6.72807H11.302C10.6836 6.72807 10.6836 6.72807 10.4431 6.23566C10.2027 5.74326 10.2027 5.73181 10.4202 5.11344C10.8668 3.80799 10.592 2.33078 9.76751 1.55209C8.90866 0.750501 7.43144 0.532927 6.34357 1.04823ZM8.72544 1.52919C10.7065 2.5369 10.5347 4.90732 8.30174 7.25483L7.66047 7.93045L6.97339 7.19757C5.38166 5.50278 4.84345 3.8996 5.46182 2.66286C6.05729 1.43758 7.53451 0.933721 8.72544 1.52919ZM5.69085 6.59065C5.71375 6.67081 5.63359 6.72807 5.49618 6.72807C5.33586 6.72807 5.2786 6.67081 5.33586 6.5563C5.40457 6.36163 5.62214 6.38453 5.69085 6.59065ZM9.99653 6.5563C10.0423 6.67081 9.98508 6.72807 9.83621 6.72807C9.60719 6.72807 9.53848 6.60211 9.68735 6.46469C9.80186 6.33873 9.91637 6.37308 9.99653 6.5563ZM4.40831 7.49531C4.37395 7.67853 4.30524 8.19383 4.27089 8.64043L4.19073 9.47638H3.30898H2.42723L2.5303 8.82365C2.58755 8.45721 2.72497 7.94191 2.85093 7.67853L3.06851 7.18612H3.77849H4.47701L4.40831 7.49531ZM6.77872 7.8503C7.36274 8.44576 7.43144 8.56027 7.43144 8.99542V9.47638H6.05729C4.68314 9.47638 4.68314 9.47638 4.72894 9.213C4.7633 9.07558 4.8091 8.68624 4.85491 8.35415C4.96942 7.32354 5.06103 7.18612 5.63359 7.18612C6.08019 7.18612 6.18325 7.24338 6.77872 7.8503ZM10.363 7.75868C10.4317 8.04497 10.5118 8.54882 10.5462 8.86946L10.6034 9.47638H9.2522H7.8895V8.99542C7.8895 8.56027 7.9582 8.44576 8.55367 7.83884C9.17204 7.20902 9.2293 7.17467 9.7217 7.20902C10.2256 7.24338 10.237 7.25483 10.363 7.75868ZM12.47 7.71288C12.596 7.99916 12.7448 8.51447 12.7906 8.85801L12.8937 9.47638H12.012H11.1302L11.05 8.64043C11.0157 8.19383 10.947 7.67853 10.9126 7.49531L10.8439 7.18612H11.5425H12.2524L12.47 7.71288ZM4.27089 10.7589C4.30524 11.217 4.37395 11.7323 4.40831 11.904L4.47701 12.2247H3.77849C3.13721 12.2247 3.06851 12.2018 2.91964 11.904C2.75932 11.5949 2.58755 10.9879 2.46159 10.3009L2.40433 9.93443H3.29753H4.19073L4.27089 10.7589ZM7.43144 10.2207C7.43144 10.4268 7.4887 10.507 7.66047 10.507C7.83224 10.507 7.8895 10.4268 7.8895 10.2207V9.93443H9.2522H10.6264L10.5691 10.3581C10.5347 10.5986 10.4546 11.1139 10.3859 11.5033L10.2714 12.2247H9.08043C7.96965 12.2247 7.8895 12.2132 7.8895 11.9957C7.8895 11.8468 7.80934 11.7666 7.66047 11.7666C7.5116 11.7666 7.43144 11.8468 7.43144 11.9957C7.43144 12.2132 7.35128 12.2247 6.24051 12.2247H5.04958L4.93506 11.5033C4.86636 11.1139 4.7862 10.5986 4.75184 10.3581L4.69459 9.93443H6.06874H7.43144V10.2207ZM12.8594 10.3009C12.7334 10.9879 12.5616 11.5949 12.4013 11.904C12.2524 12.2018 12.1837 12.2247 11.5425 12.2247H10.8439L10.9126 11.904C10.947 11.7323 11.0157 11.217 11.05 10.7589L11.1302 9.93443H12.0234H12.9281L12.8594 10.3009ZM4.86636 13.1637C4.98087 13.4271 5.19844 13.8279 5.34731 14.034C5.49618 14.2516 5.58779 14.4462 5.56488 14.4691C5.43892 14.6066 3.74413 13.3011 3.52656 12.9003C3.4235 12.7056 3.4693 12.6827 4.03041 12.6827C4.64878 12.6827 4.64878 12.6827 4.86636 13.1637ZM7.43144 13.7706C7.43144 15.0073 7.33983 15.099 6.6184 14.5722C6.13745 14.2058 5.89697 13.9195 5.53053 13.2209L5.2557 12.6827H6.34357H7.43144V13.7706ZM9.79041 13.2209C9.42397 13.9195 9.18349 14.2058 8.70254 14.5722C7.98111 15.099 7.8895 15.0073 7.8895 13.7706V12.6827H8.97737H10.0652L9.79041 13.2209ZM11.7944 12.9003C11.5768 13.3011 9.88202 14.6066 9.75605 14.4691C9.73315 14.4462 9.82476 14.2516 9.97363 14.034C10.1225 13.8279 10.3401 13.4271 10.4546 13.1637C10.6722 12.6827 10.6722 12.6827 11.2905 12.6827C11.8516 12.6827 11.8974 12.7056 11.7944 12.9003Z"
+                                                        fill="#FBFDFF" />
+                                                    <path
+                                                        d="M6.65234 1.87283C5.99962 2.20492 5.66753 2.75458 5.62172 3.59052C5.57592 4.20889 5.61027 4.39211 5.8622 4.80436C6.64089 6.14416 8.66776 6.15561 9.44645 4.82726C9.98466 3.92261 9.72128 2.60571 8.89679 2.0217C8.40438 1.66671 7.21345 1.58655 6.65234 1.87283ZM8.30132 2.36523C9.14872 2.75458 9.03421 2.83474 7.66005 2.83474C6.7554 2.83474 6.41186 2.80038 6.46912 2.70877C6.56073 2.54845 7.41957 2.14766 7.66005 2.14766C7.75166 2.14766 8.0494 2.25072 8.30132 2.36523ZM9.20597 3.52181C9.24033 3.64778 9.24033 3.8539 9.20597 3.97987C9.13727 4.19744 9.03421 4.20889 7.66005 4.20889C6.2859 4.20889 6.18284 4.19744 6.11413 3.97987C6.07977 3.8539 6.07977 3.64778 6.11413 3.52181C6.18284 3.30424 6.2859 3.29279 7.66005 3.29279C9.03421 3.29279 9.13727 3.30424 9.20597 3.52181ZM8.63341 4.89597C8.34713 5.2166 7.75166 5.35402 7.27071 5.22806C7.06458 5.1708 6.80121 5.02193 6.68669 4.89597C6.48057 4.66694 6.49202 4.66694 7.66005 4.66694C8.82808 4.66694 8.83953 4.66694 8.63341 4.89597Z"
+                                                        fill="#FBFDFF" />
+                                                    <path
+                                                        d="M6.40039 11.0796C6.40039 11.2513 6.48055 11.3086 6.68667 11.3086C6.8928 11.3086 6.97295 11.2513 6.97295 11.0796C6.97295 10.9078 6.8928 10.8505 6.68667 10.8505C6.48055 10.8505 6.40039 10.9078 6.40039 11.0796Z"
+                                                        fill="#FBFDFF" />
+                                                    <path
+                                                        d="M7.37416 10.9633C7.32836 11.0435 7.33981 11.1465 7.40852 11.2152C7.56883 11.3755 7.94673 11.2839 7.94673 11.0778C7.94673 10.8717 7.48868 10.7801 7.37416 10.9633Z"
+                                                        fill="#FBFDFF" />
+                                                    <path
+                                                        d="M8.34766 11.0796C8.34766 11.2513 8.42782 11.3086 8.63394 11.3086C8.84006 11.3086 8.92022 11.2513 8.92022 11.0796C8.92022 10.9078 8.84006 10.8505 8.63394 10.8505C8.42782 10.8505 8.34766 10.9078 8.34766 11.0796Z"
+                                                        fill="#FBFDFF" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_34717_11404">
+                                                        <rect width="14.6576" height="14.6576" fill="white"
+                                                            transform="translate(0.332031 0.773438)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-14 lh-150 color-b1 ff-poppins text-nowrap">Country Code
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 pt-12">
+                                        <input type="checkbox" name="checkbox">
+                                        <div class="d-flex align-items-center">
+                                            <svg width="13" height="10" viewBox="0 0 13 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.33874 0.180303C2.85779 0.30913 2.46845 0.629766 2.25087 1.07064C2.0791 1.41704 2.0791 1.41132 2.0791 3.97068C2.0791 6.55867 2.0791 6.53576 2.26518 6.90507C2.45127 7.27437 2.74614 7.54348 3.15266 7.70952L3.35306 7.79254L7.32951 7.80113C11.7182 7.80972 11.4462 7.81831 11.8385 7.6265C12.099 7.50054 12.3996 7.19708 12.5341 6.92511C12.7345 6.52718 12.7317 6.58443 12.7231 3.88479C12.7145 1.46857 12.7145 1.46571 12.6515 1.27676C12.5685 1.03629 12.3938 0.767181 12.1963 0.575372C12.0188 0.406466 11.6552 0.214657 11.4176 0.165989C11.3117 0.143086 10.0635 0.134498 7.38104 0.137361C4.04872 0.137361 3.4733 0.143086 3.33874 0.180303ZM11.1743 0.649806C11.4348 0.684159 11.6867 0.807261 11.8757 0.996207C12.0532 1.1737 12.1906 1.45712 12.1963 1.65752L12.1992 1.80066L9.88315 2.79978C8.60919 3.34945 7.54423 3.79891 7.52132 3.79891C7.49556 3.79891 6.37619 3.37807 5.0364 2.86277L2.59441 1.92376V1.78921C2.59441 1.4972 2.78336 1.10499 3.01811 0.916048C3.18988 0.778632 3.41604 0.675571 3.60785 0.652668C3.85978 0.618314 10.9224 0.618314 11.1743 0.649806ZM12.2078 4.39151L12.1992 6.41839L12.1305 6.56726C12.0932 6.65028 12.056 6.71899 12.0446 6.71612C12.036 6.71612 11.6094 6.21799 11.097 5.61107C10.5845 5.00416 9.98907 4.29704 9.77436 4.04225L9.38502 3.57847L10.7764 2.97442C11.5436 2.64233 12.1791 2.37036 12.1934 2.37036C12.2049 2.3675 12.2106 3.27787 12.2078 4.39151ZM4.16037 3.07748C4.96769 3.38666 5.629 3.65004 5.629 3.66436C5.629 3.67581 4.98773 4.38292 4.20618 5.23604L2.78336 6.78769L2.69461 6.60447L2.60872 6.41839L2.60013 4.44591C2.59155 2.56503 2.59441 2.47629 2.64308 2.49346C2.67171 2.50491 3.35592 2.76829 4.16037 3.07748ZM10.2811 5.44503C11.0455 6.34968 11.6695 7.1026 11.6695 7.11692C11.6695 7.15127 11.4205 7.2572 11.2487 7.29155C11.1571 7.31159 9.84307 7.32018 7.31806 7.31445L3.52483 7.30586L3.35306 7.23429C3.25858 7.19421 3.18129 7.15413 3.18129 7.14268C3.18129 7.13123 3.85691 6.3869 4.68141 5.48797C5.82081 4.24551 6.19011 3.85616 6.22733 3.87048C6.25309 3.88193 6.5222 3.98499 6.82279 4.10237C7.55568 4.38579 7.50987 4.38579 8.26279 4.05943C8.58629 3.91915 8.85826 3.80463 8.86971 3.80177C8.88116 3.79891 9.51385 4.54038 10.2811 5.44503Z"
+                                                    fill="#FBFDFF" />
+                                                <path
+                                                    d="M1.37229 1.36416C1.08315 1.42428 0.814042 1.63899 0.688078 1.91669L0.605056 2.09418L0.596468 5.02857C0.590742 7.0669 0.599331 8.02022 0.61937 8.14905C0.716706 8.71875 1.17476 9.21688 1.73873 9.36575C1.97635 9.43159 10.7623 9.42873 10.9742 9.36575C11.4322 9.23119 11.7786 8.84758 11.8703 8.38666C11.9161 8.16336 11.8903 8.02595 11.793 7.94865C11.6212 7.8141 11.3836 7.93434 11.3836 8.1605C11.3836 8.41815 11.1746 8.72447 10.9198 8.83899L10.7681 8.9077H6.35933H1.95058L1.79313 8.84471C1.56983 8.7531 1.41237 8.63 1.295 8.45251C1.10032 8.15764 1.10605 8.27787 1.10605 5.10301C1.10605 2.26595 1.10605 2.24019 1.16617 2.11995C1.19766 2.05124 1.26637 1.97108 1.31504 1.93959C1.39806 1.88806 1.44386 1.87374 1.6414 1.83366C1.74446 1.81363 1.82176 1.71056 1.82176 1.59319C1.82176 1.40138 1.6414 1.30691 1.37229 1.36416Z"
+                                                    fill="#FBFDFF" />
+                                            </svg>
+
+                                        </div>
+                                        <div class="fw-400 fs-14 lh-150 color-b1 ff-poppins">E-mail</div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="plus-box d-flex justify-content-center align-items-center position-absolute">
+                                    <svg width="23" height="16" viewBox="0 0 23 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.5 1.65625L8.16667 14.989L1.5 8.32292" stroke="#FBFDFF"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="fw-500 fs-20 lh-150 white-color ff-jakrta pt-4">Select data model</div>
+                            <img src="./assets/images/arrow.png" alt="arrow-png"
+                                class="arrow-png1 commen-arrow position-absolute d-none d-sm-block">
+                        </div>
+
+                        <div
+                            class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex flex-column align-items-center align-items-md-st position-relative d-md-flex flex-md-column align-items-md-end align-items-xl-start mt-4 mt-md-0">
+                            <div class="data-card d-flex justify-content-center align-items-center position-relative">
+                                <div class="sub-data-card">
+                                    <div class="ff-poppins fs-16 lh-150 white-color fw-600 text-nowrap">Practice
+                                        Facilitation</div>
+                                    <div class="ff-poppins fw-600 lh-150 white-color fs-12 text-nowrap pt-2">Sample
+                                        Medical
+                                        Record: Mo</div>
+                                    <div class="fw-400 fs-10 lh-150 ff-poppins color-b1 pt-2">Previous Page</div>
+                                    <div
+                                        class="tab fw-400 fs-10 lh-150 white-color ff-poppins d-flex align-items-center mt-1">
+                                        Table of Contents</div>
+                                    <div class="fs-10 fw-400 white-color ff-poppins lh-150 mt-2">Use for <span
+                                            class="tab">April 2011</span> abstraction</div>
+                                    <div
+                                        class="tab fw-400 fs-10 lh-150 white-color ff-poppins d-flex align-items-center mt-2">
+                                        WeServeEveryone Clinic</div>
+                                    <div class="black-underline w-100 mt-2"></div>
+                                    <div class="fw-400 fs-10 lh-150 ff-poppins color-b1">1111 First Street California
+                                    </div>
+                                </div>
+                                <div
+                                    class="plus-box d-flex justify-content-center align-items-center position-absolute">
+                                    <svg width="23" height="16" viewBox="0 0 23 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.5 1.65625L8.16667 14.989L1.5 8.32292" stroke="#FBFDFF"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="fw-500 fs-20 lh-150 white-color ff-jakrta pt-4">Auto Highlight by AI</div>
+                            <img src="./assets/images/arrow.png" alt="arrow-png"
+                                class="arrow-png2 commen-arrow position-absolute d-none d-md-block">
+                        </div>
+
+                        <div
+                            class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex flex-column align-items-center align-items-md-st position-relative mt-4 mt-xl-0 d-md-flex flex-md-column align-items-md-center align-items-xl-start">
+                            <div class="data-card d-flex justify-content-center align-items-center position-relative">
+                                <div class="sub-data-card">
+                                    <div class="ff-poppins fs-16 lh-150 white-color fw-600 text-nowrap">Practice
+                                        Facilitation</div>
+                                    <div class="ff-poppins fw-600 lh-150 white-color fs-12 text-nowrap pt-2">Sample
+                                        Medical
+                                        Record: Mo</div>
+                                    <div class="fw-400 fs-10 lh-150 ff-poppins color-b1 pt-2">Previous Page</div>
+                                    <div
+                                        class="tab bg-black fw-400 fs-10 lh-150 white-color ff-poppins d-flex align-items-center mt-1">
+                                        Table of Contents</div>
+                                    <div class="fs-10 fw-400 white-color ff-poppins lh-150 mt-2">Use for <span
+                                            class="tab bg-black">April 2011</span>
+                                        abstraction</div>
+                                    <div
+                                        class="tab bg-black fw-400 fs-10 lh-150 white-color ff-poppins d-flex align-items-center mt-2">
+                                        WeServeEveryone Clinic</div>
+                                    <div class="black-underline w-100 mt-2"></div>
+                                    <div class="fw-400 fs-10 lh-150 ff-poppins color-b1">1111 First Street California
+                                    </div>
+                                </div>
+                                <div
+                                    class="plus-box d-flex justify-content-center align-items-center position-absolute">
+                                    <svg width="23" height="16" viewBox="0 0 23 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.5 1.65625L8.16667 14.989L1.5 8.32292" stroke="#FBFDFF"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="fw-500 fs-20 lh-150 white-color ff-jakrta pt-4">Doc. has been redacted</div>
+                            <img src="./assets/images/arrow.png" alt="arrow-png"
+                                class="arrow-png4 commen-arrow position-absolute d-none d-sm-block d-md-none d-xl-block">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <button
+                            class="try-btn commen-btn w-126 fw-600 fs-16 lh-150 white-color ff-jakrta d-flex justify-content-center align-items-center mt-76 position-relative z-1">Try
+                            now</button>
+                    </div>
+                </div>
+                <img src="./assets/images/sec6-middle.png" alt="middle-png" class="section7-elips position-absolute">
+            </section>
+
+            <section class="section8 position-relative">
+                <div class="my_container mx-auto d-flex flex-column align-items-center position-relative z-1">
+                    <div class="our-txt fw-500 fs-44 lh-150 ff-jakrta white-color text-center">Our Integrations</div>
+                    <div class="row w-100">
+                        <div
+                            class="col-md-4 col-lg-3 border-bot border-md-right border-md-bottom d-flex justify-content-center align-items-center">
+                            <div>
+                                <img src="./assets/images/google.png" alt="google"
+                                    class="integrate-img1 w-100 commen-integrate">
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-4 col-lg-3 border-bot border-md-right border-md-bottom d-flex justify-content-center align-items-center">
+                            <div>
+                                <img src="./assets/images/dropbox.png" alt="google"
+                                    class="integrate-img1 w-100 commen-integrate">
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-4 col-lg-3 border-bot border-lg-right border-md-bottom d-flex justify-content-center align-items-center">
+                            <div>
+                                <img src="./assets/images/box.png" alt="google"
+                                    class="integrate-img1 w-100 commen-integrate">
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-4 col-lg-3 border-bot border-md-none border-lg-bot  border-md-right border-right-lg-none border-lg-bottom d-flex justify-content-center align-items-center">
+                            <div>
+                                <img src="./assets/images/nd.png" alt="google"
+                                    class="integrate-img1 w-100 commen-integrate">
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-4 col-lg-3 border-bot border-md-none  border-md-right  d-flex justify-content-center align-items-center">
+                            <div>
+                                <img src="./assets/images/exchange.png" alt="google"
+                                    class="integrate-img1 w-100 commen-integrate">
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-4 col-lg-3 border-bot border-md-none  border-lg-right d-flex justify-content-center align-items-center">
+                            <div>
+                                <img src="./assets/images/amazon.png" alt="google"
+                                    class="integrate-img1 w-100 commen-integrate">
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-4 d-md-none border-bot border-md-none d-lg-block col-lg-3 border-md-right d-flex justify-content-center align-items-center">
+                            <div>
+                                <img src="./assets/images/sharepoint.png" alt="google"
+                                    class="integrate-img1 w-100 commen-integrate">
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-4 d-md-none d-lg-block col-lg-3 d-flex justify-content-center align-items-center">
+                            <div>
+                                <img src="./assets/images/onedrive.png" alt="google"
+                                    class="integrate-img1 w-100 commen-integrate">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/images/sec3-right.png" alt="sec3-right"
+                    class="sec3-right position-absolute width-100 width-sm-unset">
+            </section>
+
+            <section class="section9 position-relative">
+                <div class="my_container mx-auto">
+                    <div class="row align-items-center justify-content-between gap-4 gap-md-0">
+                        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+                            <div class="mw-513">
+                                <div class="fw-500 fs-44 lh-150 ff-jakrta white-color text-center text-md-start">
+                                    Accelerate Your Enterprise’s Document Redaction Efforts</div>
+                                <div class="sec2-p fw-400 fs-16 lh-150 ff-jakrta text-center text-md-start">As your team
+                                    carries
+                                    out time-intensive manual redaction processes, there’s a trade-off between security
+                                    and
+                                    efficiency.
+                                    iDox.ai Redact offers the best of both worlds with thorough, automatic redactions.
+                                    <button
+                                        class="learn-btn commen-btn try-btn fw-600 fs-16 lh-150 white-color ff-jakrta d-flex justify-content-center align-items-center mx-auto mx-md-0 position-relative z-1">learn
+                                        more</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex justify-content-center justify-md-content-end">
+                            <div class="position-relative">
+                                <img src="./assets/images/sec8.png" alt="sec6-img"
+                                    class="sec8-img w-100 position-relative z-1">
+                                <img src="./assets/images/relative-in-sec8.png" alt="relative-in-sec8"
+                                    class="relative-in-sec8 position-absolute d-none d-sm-block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section10 position-relative">
+                <div class="my_container mx-auto d-flex flex-column align-items-center position-relative z-1">
+                    <div class="sec10-txt fw-500 fs-44 lh-150 white-color ff-jakrta text-center">choose the plan best
+                        fits
+                        for you</div>
+                    <div class="row w-100 justify-content-center">
+                        <div class="col-12 col-sm-6 col-lg-4 border-sm-right px-0 cursor">
+                            <div class="hover-effect1 commen-sec10 mb-4 mb-sm-0">
+                                <div class="two-txt text-center pb-4 border-bot">
+                                    <div class="one-txt fw-600 fs-32 lh-150 ff-jakrta white-color">$0.99</div>
+                                    <div class="two-txt fw-500 fs-20 lh-150 white-color ff-jakrta">7 Days</div>
+                                </div>
+
+                                <div class="pr-12">
+                                    <div class="right-svg-with-txt d-flex align-items-center gap-4 pt-58">
+                                        <div>
+                                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_b_34717_11513)">
+                                                    <rect y="0.683594" width="20.6296" height="20.6296" rx="10.3148"
+                                                        fill="#0389FF" fill-opacity="0.1" />
+                                                    <path d="M15.472 7.55859L8.5955 14.4348L5.15723 10.9969"
+                                                        stroke="#0389FF" stroke-width="1.03148" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_b_34717_11513" x="-2.5787" y="-1.89511"
+                                                        width="25.7873" height="25.7863" filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                        <feGaussianBlur in="BackgroundImageFix"
+                                                            stdDeviation="1.28935" />
+                                                        <feComposite in2="SourceAlpha" operator="in"
+                                                            result="effect1_backgroundBlur_34717_11513" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="effect1_backgroundBlur_34717_11513" result="shape" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-18 lh-150 color-b1 ff-jakrta">50 pages analysis ( 7 days )
+                                        </div>
+                                    </div>
+                                    <div class="right-svg-with-txt d-flex align-items-center gap-4">
+                                        <div>
+                                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_b_34717_11513)">
+                                                    <rect y="0.683594" width="20.6296" height="20.6296" rx="10.3148"
+                                                        fill="#0389FF" fill-opacity="0.1" />
+                                                    <path d="M15.472 7.55859L8.5955 14.4348L5.15723 10.9969"
+                                                        stroke="#0389FF" stroke-width="1.03148" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_b_34717_11513" x="-2.5787" y="-1.89511"
+                                                        width="25.7873" height="25.7863" filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                        <feGaussianBlur in="BackgroundImageFix"
+                                                            stdDeviation="1.28935" />
+                                                        <feComposite in2="SourceAlpha" operator="in"
+                                                            result="effect1_backgroundBlur_34717_11513" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="effect1_backgroundBlur_34717_11513" result="shape" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-18 lh-150 color-b1 ff-jakrta">Share up to 2 users</div>
+                                    </div>
+                                    <div class="right-svg-with-txt d-flex align-items-center gap-4">
+                                        <div>
+                                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_b_34717_11513)">
+                                                    <rect y="0.683594" width="20.6296" height="20.6296" rx="10.3148"
+                                                        fill="#0389FF" fill-opacity="0.1" />
+                                                    <path d="M15.472 7.55859L8.5955 14.4348L5.15723 10.9969"
+                                                        stroke="#0389FF" stroke-width="1.03148" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_b_34717_11513" x="-2.5787" y="-1.89511"
+                                                        width="25.7873" height="25.7863" filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                        <feGaussianBlur in="BackgroundImageFix"
+                                                            stdDeviation="1.28935" />
+                                                        <feComposite in2="SourceAlpha" operator="in"
+                                                            result="effect1_backgroundBlur_34717_11513" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="effect1_backgroundBlur_34717_11513" result="shape" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-18 lh-150 color-b1 ff-jakrta">After 7 day, auto renews
+                                            plan
+                                        </div>
+                                    </div>
+                                </div>
+                                <button
+                                    class="select-btn fw-600 fs-16 ff-jakrta lh-150 white-color d-flex justify-content-center align-items-center mx-auto mb-2 mb-sm-5">select</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 border-lg-right px-0 cursor">
+                            <div class="hover-effect commen-sec10 mb-4 mb-sm-0">
+                                <div class="two-txt text-center pb-4 border-bot">
+                                    <div class="one-txt fw-600 fs-32 lh-150 ff-jakrta white-color">$0.99</div>
+                                    <div class="two-txt fw-500 fs-20 lh-150 white-color ff-jakrta">7 Days</div>
+                                </div>
+                                <div class="pr-12">
+                                    <div class="right-svg-with-txt d-flex align-items-center gap-4 pt-58">
+                                        <div>
+                                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_b_34717_11513)">
+                                                    <rect y="0.683594" width="20.6296" height="20.6296" rx="10.3148"
+                                                        fill="#0389FF" fill-opacity="0.1" />
+                                                    <path d="M15.472 7.55859L8.5955 14.4348L5.15723 10.9969"
+                                                        stroke="#0389FF" stroke-width="1.03148" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_b_34717_11513" x="-2.5787" y="-1.89511"
+                                                        width="25.7873" height="25.7863" filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                        <feGaussianBlur in="BackgroundImageFix"
+                                                            stdDeviation="1.28935" />
+                                                        <feComposite in2="SourceAlpha" operator="in"
+                                                            result="effect1_backgroundBlur_34717_11513" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="effect1_backgroundBlur_34717_11513" result="shape" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-18 lh-150 color-b1 ff-jakrta">50 pages analysis ( 7 days )
+                                        </div>
+                                    </div>
+                                    <div class="right-svg-with-txt d-flex align-items-center gap-4">
+                                        <div>
+                                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_b_34717_11513)">
+                                                    <rect y="0.683594" width="20.6296" height="20.6296" rx="10.3148"
+                                                        fill="#0389FF" fill-opacity="0.1" />
+                                                    <path d="M15.472 7.55859L8.5955 14.4348L5.15723 10.9969"
+                                                        stroke="#0389FF" stroke-width="1.03148" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_b_34717_11513" x="-2.5787" y="-1.89511"
+                                                        width="25.7873" height="25.7863" filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                        <feGaussianBlur in="BackgroundImageFix"
+                                                            stdDeviation="1.28935" />
+                                                        <feComposite in2="SourceAlpha" operator="in"
+                                                            result="effect1_backgroundBlur_34717_11513" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="effect1_backgroundBlur_34717_11513" result="shape" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-18 lh-150 color-b1 ff-jakrta">Share up to 2 users</div>
+                                    </div>
+                                    <div class="right-svg-with-txt d-flex align-items-center gap-4">
+                                        <div>
+                                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_b_34717_11513)">
+                                                    <rect y="0.683594" width="20.6296" height="20.6296" rx="10.3148"
+                                                        fill="#0389FF" fill-opacity="0.1" />
+                                                    <path d="M15.472 7.55859L8.5955 14.4348L5.15723 10.9969"
+                                                        stroke="#0389FF" stroke-width="1.03148" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_b_34717_11513" x="-2.5787" y="-1.89511"
+                                                        width="25.7873" height="25.7863" filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                        <feGaussianBlur in="BackgroundImageFix"
+                                                            stdDeviation="1.28935" />
+                                                        <feComposite in2="SourceAlpha" operator="in"
+                                                            result="effect1_backgroundBlur_34717_11513" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="effect1_backgroundBlur_34717_11513" result="shape" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-18 lh-150 color-b1 ff-jakrta">After 7 day, auto renews
+                                            plan
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="select-btn fw-600 fs-16 ff-jakrta lh-150 white-color d-flex justify-content-center align-items-center mx-auto mb-2 mb-sm-5">select</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 px-0 pt-4 pt-lg-0 bor cursor">
+                            <div class="hover-effect3 commen-sec10 mb-4 mb-sm-0">
+                                <div class="two-txt text-center pb-4 border-bot">
+                                    <div class="one-txt fw-600 fs-32 lh-150 ff-jakrta white-color">$0.99</div>
+                                    <div class="two-txt fw-500 fs-20 lh-150 white-color ff-jakrta">7 Days</div>
+                                </div>
+
+                                <div class="pr-12">
+                                    <div class="right-svg-with-txt d-flex align-items-center gap-4 pt-58">
+                                        <div>
+                                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_b_34717_11513)">
+                                                    <rect y="0.683594" width="20.6296" height="20.6296" rx="10.3148"
+                                                        fill="#0389FF" fill-opacity="0.1" />
+                                                    <path d="M15.472 7.55859L8.5955 14.4348L5.15723 10.9969"
+                                                        stroke="#0389FF" stroke-width="1.03148" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_b_34717_11513" x="-2.5787" y="-1.89511"
+                                                        width="25.7873" height="25.7863" filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                        <feGaussianBlur in="BackgroundImageFix"
+                                                            stdDeviation="1.28935" />
+                                                        <feComposite in2="SourceAlpha" operator="in"
+                                                            result="effect1_backgroundBlur_34717_11513" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="effect1_backgroundBlur_34717_11513" result="shape" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-18 lh-150 color-b1 ff-jakrta">50 pages analysis ( 7 days )
+                                        </div>
+                                    </div>
+                                    <div class="right-svg-with-txt d-flex align-items-center gap-4">
+                                        <div>
+                                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_b_34717_11513)">
+                                                    <rect y="0.683594" width="20.6296" height="20.6296" rx="10.3148"
+                                                        fill="#0389FF" fill-opacity="0.1" />
+                                                    <path d="M15.472 7.55859L8.5955 14.4348L5.15723 10.9969"
+                                                        stroke="#0389FF" stroke-width="1.03148" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_b_34717_11513" x="-2.5787" y="-1.89511"
+                                                        width="25.7873" height="25.7863" filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                        <feGaussianBlur in="BackgroundImageFix"
+                                                            stdDeviation="1.28935" />
+                                                        <feComposite in2="SourceAlpha" operator="in"
+                                                            result="effect1_backgroundBlur_34717_11513" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="effect1_backgroundBlur_34717_11513" result="shape" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-18 lh-150 color-b1 ff-jakrta">Share up to 2 users</div>
+                                    </div>
+                                    <div class="right-svg-with-txt d-flex align-items-center gap-4">
+                                        <div>
+                                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_b_34717_11513)">
+                                                    <rect y="0.683594" width="20.6296" height="20.6296" rx="10.3148"
+                                                        fill="#0389FF" fill-opacity="0.1" />
+                                                    <path d="M15.472 7.55859L8.5955 14.4348L5.15723 10.9969"
+                                                        stroke="#0389FF" stroke-width="1.03148" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_b_34717_11513" x="-2.5787" y="-1.89511"
+                                                        width="25.7873" height="25.7863" filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                        <feGaussianBlur in="BackgroundImageFix"
+                                                            stdDeviation="1.28935" />
+                                                        <feComposite in2="SourceAlpha" operator="in"
+                                                            result="effect1_backgroundBlur_34717_11513" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="effect1_backgroundBlur_34717_11513" result="shape" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="fw-400 fs-18 lh-150 color-b1 ff-jakrta">After 7 day, auto renews
+                                            plan
+                                        </div>
+                                    </div>
+                                </div>
+                                <button
+                                    class="select-btn fw-600 fs-16 ff-jakrta lh-150 white-color d-flex justify-content-center align-items-center mx-auto mb-2 mb-sm-5">select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/images/sec3-right.png" alt="sec10-right"
+                    class="sec10-right position-absolute left-0 ">
+            </section>
+
+            <section class="section11 w-100 position-relative d-flex">
+                <img src="./assets/images/sec11-line.png" alt="sec11-top"
+                    class="sec11-top position-absolute top-0 left-0 w-100">
+
+                <img src="./assets/images/sec11-bottom.png" alt="sec11-top"
+                    class="sec11-top position-absolute bottom-0 left-0 w-100">
+
+                <div class="my_container mx-auto flex-grow-1 d-flex align-items-center justify-content-center">
+                    <div class="get-box d-flex flex-column align-items-center">
+                        <div class="fw-500 fs-44 lh-150 ff-jakrta white-color text-center">Get started today!</div>
+                        <div class="fw-400 fs-16 lh-150 ff-jakrta color-b1 pt-2 pb-5 text-center">Arcu egestas
+                            pellentesque
+                            velit
+                            facilisis in in. Tortor nisl urna lacus mauris adipiscing commodo purus. Lectus etiam
+                            arcu sagittis pellentesque hendrerit.</div>
+                        <form action="php"
+                            class="search-box d-flex align-items-center justify-content-between overflow-hidden w-100">
+                            <input type="email" name="sign-up" class="sign-up fw-400 fs-16 ff-jakrta lh-150 color-b7"
+                                placeholder="Enter your email here">
+                            <button
+                                class="sign-btn commen-btn try-btn fw-600 fs-16 lh-150 white-color ff-jakrta d-flex justify-content-center align-items-center">Sign
+                                up now</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ----------------------------------------- footer ------------------------------------------------- -->
+
+            <footer class="footer-bg footer">
+                <div class="container-fluid container-xxl">
+                    <div class="row">
+                        <div class="col-12 col-xl-3 pb-4 pb-xl-0">
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="./assets/images/logo.png" alt="logo">
+                                </a>
+                                <div class="footer-p fs-14 fw-400 lh-150 ff-jakrta color-b1">Any system that works with
+                                    API
+                                    can be connected via APIcenter.</div>
+
+                                <div class="all-social-icons d-flex align-items-center">
+
+                                    <div class="facebook commen-icon d-flex justify-content-center align-items-center">
+                                        <a href="https://www.facebook.com/" target="_blank"
+                                            class="d-flex justify-content-center align-items-center">
+                                            <svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.3418 11.4922H9.8418L10.8418 7.49219H7.3418V5.49219C7.3418 4.46219 7.3418 3.49219 9.3418 3.49219H10.8418V0.132188C10.5158 0.0891876 9.2848 -0.0078125 7.9848 -0.0078125C5.2698 -0.0078125 3.3418 1.64919 3.3418 4.69219V7.49219H0.341797V11.4922H3.3418V19.9922H7.3418V11.4922Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </a>
+                                    </div>
+
+                                    <div class="insta commen-icon d-flex justify-content-center align-items-center">
+                                        <a href="https://www.instagram.com/" target="_blank"
+                                            class="d-flex justify-content-center align-items-center">
+                                            <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.84115 5.66016C8.0897 5.66016 7.36903 5.95867 6.83768 6.49002C6.30632 7.02137 6.00781 7.74204 6.00781 8.49349C6.00781 9.24494 6.30632 9.96561 6.83768 10.497C7.36903 11.0283 8.0897 11.3268 8.84115 11.3268C9.59259 11.3268 10.3133 11.0283 10.8446 10.497C11.376 9.96561 11.6745 9.24494 11.6745 8.49349C11.6745 7.74204 11.376 7.02137 10.8446 6.49002C10.3133 5.95867 9.59259 5.66016 8.84115 5.66016Z"
+                                                    fill="white" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.4418 -0.0078125C4.08919 -0.0078125 2.79199 0.529507 1.83555 1.48594C0.879117 2.44238 0.341797 3.73958 0.341797 5.09219L0.341797 11.8922C0.341797 13.2448 0.879117 14.542 1.83555 15.4984C2.79199 16.4549 4.08919 16.9922 5.4418 16.9922H12.2418C13.5944 16.9922 14.8916 16.4549 15.848 15.4984C16.8045 14.542 17.3418 13.2448 17.3418 11.8922V5.09219C17.3418 3.73958 16.8045 2.44238 15.848 1.48594C14.8916 0.529507 13.5944 -0.0078125 12.2418 -0.0078125L5.4418 -0.0078125ZM4.87513 8.49219C4.87513 7.44016 5.29305 6.43123 6.03694 5.68733C6.78083 4.94344 7.78977 4.52552 8.8418 4.52552C9.89382 4.52552 10.9028 4.94344 11.6467 5.68733C12.3905 6.43123 12.8085 7.44016 12.8085 8.49219C12.8085 9.54421 12.3905 10.5532 11.6467 11.297C10.9028 12.0409 9.89382 12.4589 8.8418 12.4589C7.78977 12.4589 6.78083 12.0409 6.03694 11.297C5.29305 10.5532 4.87513 9.54421 4.87513 8.49219ZM12.8085 4.52552H13.9418V3.39219H12.8085V4.52552Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </a>
+                                    </div>
+
+                                    <div class="twit commen-icon d-flex justify-content-center align-items-center">
+                                        <a href="https://twitter.com/?lang=en" target="_blank"
+                                            class="d-flex justify-content-center align-items-center">
+                                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.3418 1.61743C16.7161 1.90184 16.0416 2.08875 15.3428 2.17813C16.0579 1.74745 16.6104 1.06485 16.8705 0.2441C16.196 0.650409 15.4484 0.934826 14.6602 1.09735C14.0182 0.398497 13.1162 -0.0078125 12.0923 -0.0078125C10.1826 -0.0078125 8.62239 1.55242 8.62239 3.47833C8.62239 3.75462 8.65489 4.02278 8.71178 4.27469C5.81885 4.12842 3.24285 2.73884 1.52822 0.634157C1.22755 1.14611 1.0569 1.74745 1.0569 2.38129C1.0569 3.59209 1.66637 4.66475 2.60901 5.27422C2.03205 5.27422 1.49572 5.11169 1.0244 4.86791V4.89228C1.0244 6.58253 2.22707 7.99649 3.81981 8.31341C3.30845 8.45335 2.77161 8.47282 2.25145 8.3703C2.47217 9.06304 2.90442 9.66919 3.48746 10.1036C4.0705 10.5379 4.775 10.7786 5.50193 10.7919C4.2697 11.7674 2.74227 12.2947 1.17067 12.2871C0.894378 12.2871 0.618088 12.2709 0.341797 12.2384C1.88577 13.2298 3.72229 13.8067 5.68883 13.8067C12.0923 13.8067 15.6109 8.49219 15.6109 3.88464C15.6109 3.73024 15.6109 3.58397 15.6028 3.42957C16.2854 2.942 16.8705 2.32441 17.3418 1.61743Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-9 pt-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4 position-relative">
+                                    <div class="row flex-row-reverse flex-xl-row">
+                                        <div class="col-7 col-xl-5 position-relative left-xl-12">
+                                            <li
+                                                class="footer-head fw-500 fs-16 lh-150 white-color ff-jakrta text-uppercase pb-16">
+                                                PRODUCTS</li>
+
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-xl-nowrap pb-10">iDox.ai
+                                                    Data Discovery</a></div>
+
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-xl-nowrap pb-10">iDox.ai
+                                                    Data Redact</a></div>
+
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-xl-nowrap pb-10">iDox.ai
+                                                    Data Compair</a></div>
+
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-xl-nowrap pb-10">iDox.ai
+                                                    Data Review</a>
+                                            </div>
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-xl-nowrap pb-10">Industries</a>
+                                            </div>
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-xl-nowrap">Developer</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-5 col-xl-7 d-flex justify-content-xl-end">
+                                            <div>
+                                                <li
+                                                    class="footer-head fw-500 fs-16 lh-150 white-color ff-jakrta text-uppercase pb-16">
+                                                    store</li>
+
+                                                <div class="footer-list"><a href="#"
+                                                        class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Choose
+                                                        a plan</a></div>
+
+                                                <div class="footer-list"><a href="#"
+                                                        class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Integrations</a>
+                                                </div>
+
+                                                <div class="footer-list"><a href="#"
+                                                        class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Pricing</a>
+                                                </div>
+
+                                                <div class="footer-list"><a href="#"
+                                                        class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">News</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-5 pt-4 pt-md-0">
+                                    <div class="row flex-row-reverse flex-md-row">
+                                        <div class="col-7 col-md-5">
+                                            <li
+                                                class="footer-head fw-500 fs-16 lh-150 white-color ff-jakrta text-uppercase pb-16">
+                                                support</li>
+
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-xl-nowrap pb-10">Customer
+                                                    Support</a></div>
+                                        </div>
+                                        <div class="col-5 col-md-7 d-flex">
+                                            <div>
+                                                <li
+                                                    class="footer-head fw-500 fs-16 lh-150 white-color ff-jakrta text-uppercase pb-16">
+                                                    COMPANY</li>
+
+                                                <div class="footer-list"><a href="#"
+                                                        class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">About
+                                                        Us</a></div>
+
+                                                <div class="footer-list"><a href="#"
+                                                        class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Security</a>
+                                                </div>
+
+                                                <div class="footer-list"><a href="#"
+                                                        class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Partnership
+                                                        Opportunities</a>
+                                                </div>
+
+                                                <div class="footer-list"><a href="#"
+                                                        class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Careers</a>
+                                                </div>
+
+                                                <div class="footer-list"><a href="#"
+                                                        class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Privacy
+                                                        Policy</a>
+                                                </div>
+
+                                                <div class="footer-list"><a href="#"
+                                                        class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Terms
+                                                        of Services</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3 pt-4 pt-lg-0">
+                                    <div class="row flex-row-reverse flex-xl-row">
+                                        <div class="col-7 col-md-6">
+                                            <li
+                                                class="footer-head fw-500 fs-16 lh-150 white-color ff-jakrta text-uppercase pb-16">
+                                                ENTERPRISE</li>
+
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-xl-nowrap pb-10">Enterprise</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-5 col-md-6 position-relative right-xl-8">
+                                            <li
+                                                class="footer-head fw-500 fs-16 lh-150 white-color ff-jakrta text-uppercase pb-16">
+                                                RESOURCES</li>
+
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Blog</a>
+                                            </div>
+
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Case
+                                                    Studies</a>
+                                            </div>
+
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">eBooks</a>
+                                            </div>
+
+                                            <div class="footer-list"><a href="#"
+                                                    class="text-decoration-none fw-500 fs-16 lh-150 fl-color ff-jakrta text-nowrap pb-10">Events</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline-footer w-100 fw-400 fs-16 lh-150 color-b7 ff-jakrta text-center">
+                    2023 © Foxit Software Incorporated. All rights reserved.
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

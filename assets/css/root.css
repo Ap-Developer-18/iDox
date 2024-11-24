@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.dashbord-container {
+  max-width: 985px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my_container {
+  max-width: 1140px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+:root {
+  /* font size */
+  --fs-10: 10px;
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-15: 15px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-21: 21px;
+  --fs-24: 24px;
+  --fs-26: 26px;
+  --fs-30: 30px;
+  --fs-32: 32px;
+  --fs-36: 36px;
+  --fs-42: 42px;
+  --fs-44: 44px;
+  --fs-48: 48px;
+  --fs-64: 64px;
+
+  /* line-height */
+  --lh-150: 150%;
+  --lh-21: 21px;
+
+  /* letter spacing */
+  --em-2: 0.2em;
+
+  /* font-weight */
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+
+  /* colors */
+
+  --nav-list: #caced2;
+  --try-btn: linear-gradient(
+    159.94deg,
+    rgba(0, 136, 255, 0.58) -14.36%,
+    #0069e3 113.71%
+  );
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --hash-blue: #0389ff;
+  --ff-jakrta: "Plus Jakarta Sans", sans-serif;
+  --body-color: #020d15;
+  --first-p-color: #b0b5b9;
+  --nav-border: #fbfdff33;
+  --nav-shadow: #2746ed80;
+  --save-svg1: #8048f81a;
+  --save-svg2: #0389ff1a;
+  --save-svg3: #23a5661a;
+  --save-svg4: #f156421a;
+  --save-card: #0389ff1f;
+  --nav-color: #fbfdff03;
+  --colaborate-color: #b1b5b9;
+  --time-saving: #0389ff1f;
+  --ai-time: #0389ff;
+  --color-b1: #b1bbc6;
+  --sub-card: #00000054;
+  --color-b7: #b0b7bd;
+  --footer-bg: #021728;
+  --border-color: #273138;
+  --sub-data-card: #ffffff1a;
+  --drop-dotted: #0389ff;
+  --gradient1: #0389ff;
+  --gradient2: #0069e3;
+  --plus-box-border: #0389ff33;
+  --tab-bg: #0389ff;
+  --black-under: #00000033;
+  --search-box: #fbfdff12;
+  --svg-border: #808b93;
+  --fl-color: #98a1a9;
+  --color-blue: #0389FF;
+  --color-shadow:#2746ED80;
+  --ff-poppins: "Poppins", sans-serif;
+  --insta: rgb(228, 64, 95);
+}
+
+.ff-jakrta {
+  font-family: var(--ff-jakrta);
+}
+
+.ff-poppins {
+  font-family: var(--ff-poppins);
+}
+
+.fs-10 {
+  font-size: var(--fs-10);
+}
+
+.fs-12 {
+  font-size: var(--fs-12);
+}
+
+.fs-14 {
+  font-size: var(--fs-14);
+}
+.fs-15 {
+  font-size: var(--fs-15);
+}
+.fs-16 {
+  font-size: var(--fs-14);
+}
+.fs-18 {
+  font-size: var(--fs-18);
+}
+.fs-20 {
+  font-size: var(--fs-16);
+}
+.fs-21 {
+  font-size: var(--fs-21);
+}
+.fs-24 {
+  font-size: var(--fs-24);
+}
+.fs-26 {
+  font-size: var(--fs-26);
+}
+.fs-30 {
+  font-size: var(--fs-30);
+}
+.fs-32 {
+  font-size: var(--fs-26);
+}
+.fs-36 {
+  font-size: var(--fs-36);
+}
+.fs-42 {
+  font-size: var(--fs-42);
+}
+.fs-44 {
+  font-size: var(--fs-30);
+}
+.fs-48 {
+  font-size: var(--fs-42);
+}
+.fs-64 {
+  font-size: var(--fs-64);
+}
+
+.lh-150 {
+  line-height: var(--lh-150);
+}
+
+.lh-21 {
+  line-height: var(--lh-21);
+}
+
+.fw-300 {
+  font-weight: var(--fw-300);
+}
+
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+
+.fw-500 {
+  font-weight: var(--fw-500);
+}
+
+.fw-600 {
+  font-weight: var(--fw-600);
+}
+
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+
+.fw-800 {
+  font-weight: var(--fw-800);
+}
+
+.fw-900 {
+  font-weight: var(--fw-900);
+}
+
+/* colors */
+
+.white-color {
+  color: var(--white-color);
+}
+
+.black-color {
+  color: var(--black-color);
+}
+
+.nav-color {
+  color: var(--nav-list);
+}
+
+.try-btn {
+  background: var(--try-btn);
+}
+
+.body-color {
+  background-color: var(--body-color);
+}
+
+.hash-blue {
+  color: var(--hash-blue);
+}
+
+.save-svg1 {
+  background-color: var(--save-svg1);
+}
+
+.save-svg2 {
+  background-color: var(--save-svg2);
+}
+
+.save-svg3 {
+  background-color: var(--save-svg3);
+}
+
+.save-svg4 {
+  background-color: var(--save-svg4);
+}
+
+.commen-save-card {
+  background-color: var(--save-card);
+}
+
+.ai-time-color {
+  color: var(--ai-time);
+}
+
+.color-b1 {
+  color: var(--color-b1);
+}
+
+.color-b7 {
+  color: var(--color-b7);
+}
+
+.footer-bg {
+  background-color: var(--footer-bg);
+}
+
+.fl-color {
+  color: var(--fl-color);
+}
+
+@media (min-width: 1200px) {
+  .fs-48 {
+    font-size: var(--fs-48);
+  }
+}
+
+@media (min-width: 992px) {
+  .fs-44 {
+    font-size: var(--fs-44);
+  }
+}
+
+@media (min-width: 576px) {
+  .fs-32 {
+    font-size: var(--fs-32);
+  }
+
+  .fs-20 {
+    font-size: var(--fs-20);
+  }
+
+  .fs-16 {
+    font-size: var(--fs-16);
+  }
+}
